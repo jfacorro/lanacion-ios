@@ -1,5 +1,8 @@
 # Xcode
 #
+Podfile.lock
+"Club La Nacion.xcworkspace"/
+Pods/
 .DS_Store
 build/
 *.pbxuser
