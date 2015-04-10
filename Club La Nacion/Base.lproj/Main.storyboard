@@ -31,7 +31,7 @@
         <!--Beneficios List View Controller-->
         <scene sceneID="B6w-P5-Ywh">
             <objects>
-                <collectionViewController id="lfw-h4-YpV" customClass="BeneficiosListViewController" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="BeneficiosListViewController" id="lfw-h4-YpV" customClass="BeneficiosListViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="9HM-4L-eja">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,27 +43,21 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5Pu-Ma-L5j">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BeneficioCell" id="5Pu-Ma-L5j" customClass="BeneficioCollectionViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="20%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFp-uv-Tgd">
-                                            <rect key="frame" x="434" y="37" width="65" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="20%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFp-uv-Tgd">
+                                            <rect key="frame" x="526" y="79" width="65" height="21"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                             <color key="textColor" red="0.0" green="0.35686274509999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sobre la factura total en tratamientos!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFA-ET-njO">
-                                            <rect key="frame" x="101" y="128" width="398" height="110"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="premium" translatesAutoresizingMaskIntoConstraints="NO" id="CM0-4y-ImN">
-                                            <rect key="frame" x="434" y="-11" width="62" height="40"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="premium" translatesAutoresizingMaskIntoConstraints="NO" id="CM0-4y-ImN">
+                                            <rect key="frame" x="526" y="31" width="62" height="40"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Cuidado Personal - Centros Estéticos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="7Qq-73-JnX">
                                             <rect key="frame" x="101" y="-38" width="398" height="21"/>
@@ -71,17 +65,19 @@
                                             <color key="textColor" red="0.28627450980000002" green="0.74509803919999995" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZY4-i1-ZO4">
-                                            <rect key="frame" x="8" y="8" width="240" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="400" placeholderIntrinsicHeight="21" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZY4-i1-ZO4">
+                                            <rect key="frame" x="8" y="8" width="400" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="15290" translatesAutoresizingMaskIntoConstraints="NO" id="SIN-4E-CnT">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" image="15290" translatesAutoresizingMaskIntoConstraints="NO" id="SIN-4E-CnT">
                                             <rect key="frame" x="8" y="31" width="240" height="128"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="128" id="7rQ-JN-ea8"/>
                                                 <constraint firstAttribute="width" relation="lessThanOrEqual" constant="240" id="Dvh-m4-B8N"/>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="240" id="Yk2-DJ-Xjz"/>
+                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="128" id="lV5-3N-0Xa"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -90,18 +86,37 @@
                                                 </mask>
                                             </variation>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="30" text="Sobre la factura total en tratamientos!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFA-ET-njO">
+                                            <rect key="frame" x="8" y="162" width="600" height="30"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
                                     <constraint firstItem="SIN-4E-CnT" firstAttribute="top" secondItem="7Qq-73-JnX" secondAttribute="bottom" constant="6" id="17b-HK-puz"/>
+                                    <constraint firstItem="SIN-4E-CnT" firstAttribute="top" secondItem="ZY4-i1-ZO4" secondAttribute="bottom" constant="2" id="1T4-9W-BMq"/>
+                                    <constraint firstItem="CM0-4y-ImN" firstAttribute="top" secondItem="5Pu-Ma-L5j" secondAttribute="topMargin" constant="23" id="2Tn-Kq-bdO"/>
+                                    <constraint firstItem="UFp-uv-Tgd" firstAttribute="top" secondItem="CM0-4y-ImN" secondAttribute="bottom" constant="8" id="7U7-tI-3ig"/>
+                                    <constraint firstItem="UFp-uv-Tgd" firstAttribute="trailing" secondItem="CM0-4y-ImN" secondAttribute="trailing" id="KMT-jm-aYF"/>
+                                    <constraint firstItem="UFp-uv-Tgd" firstAttribute="leading" relation="lessThanOrEqual" secondItem="SIN-4E-CnT" secondAttribute="trailing" constant="278" id="TBy-g8-ugl"/>
+                                    <constraint firstItem="SIN-4E-CnT" firstAttribute="leading" secondItem="5Pu-Ma-L5j" secondAttribute="leadingMargin" id="bQm-ob-ovh"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="CM0-4y-ImN" secondAttribute="trailing" constant="4" id="eWL-oS-xdc"/>
                                     <constraint firstItem="UFp-uv-Tgd" firstAttribute="top" secondItem="CM0-4y-ImN" secondAttribute="bottom" constant="8" id="efT-Os-hES"/>
                                     <constraint firstItem="CM0-4y-ImN" firstAttribute="top" secondItem="7Qq-73-JnX" secondAttribute="bottom" constant="6" id="i5s-jo-UJW"/>
+                                    <constraint firstItem="dFA-ET-njO" firstAttribute="top" secondItem="SIN-4E-CnT" secondAttribute="bottom" constant="3" id="pTk-2g-3sb"/>
+                                    <constraint firstItem="UFp-uv-Tgd" firstAttribute="leading" secondItem="CM0-4y-ImN" secondAttribute="leading" id="tv7-dy-fDD"/>
+                                    <constraint firstItem="ZY4-i1-ZO4" firstAttribute="top" secondItem="7Qq-73-JnX" secondAttribute="bottom" constant="25" id="vyO-Sg-2sG"/>
+                                    <constraint firstItem="ZY4-i1-ZO4" firstAttribute="leading" secondItem="5Pu-Ma-L5j" secondAttribute="leadingMargin" id="xNZ-fR-FoS"/>
                                 </constraints>
+                                <size key="customSize" width="600" height="200"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="17b-HK-puz"/>
                                         <exclude reference="i5s-jo-UJW"/>
+                                        <exclude reference="TBy-g8-ugl"/>
                                         <exclude reference="efT-Os-hES"/>
                                     </mask>
                                 </variation>
@@ -112,6 +127,8 @@
                             <outlet property="delegate" destination="lfw-h4-YpV" id="Aqf-5U-s30"/>
                         </connections>
                     </collectionView>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                     <connections>
                         <segue destination="zdF-dZ-2Yz" kind="show" id="J2y-Nm-nWx"/>
                     </connections>
