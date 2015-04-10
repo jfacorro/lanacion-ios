@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41790E411AD8959800AAF1D9 /* BeneficiosListCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41790E401AD8959800AAF1D9 /* BeneficiosListCollectionViewController.m */; };
 		418AAD4F1AD83D1400919B4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 418AAD4E1AD83D1400919B4D /* main.m */; };
 		418AAD521AD83D1400919B4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 418AAD511AD83D1400919B4D /* AppDelegate.m */; };
 		418AAD551AD83D1400919B4D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 418AAD541AD83D1400919B4D /* ViewController.m */; };
@@ -152,6 +153,8 @@
 				7D0CA5741AD86E6E00F19DFB /* MenuContainerViewController.m */,
 				7D0CA5761AD8720300F19DFB /* MenuTableViewController.h */,
 				7D0CA5771AD8720300F19DFB /* MenuTableViewController.m */,
+				41790E3F1AD8959800AAF1D9 /* BeneficiosListCollectionViewController.h */,
+				41790E401AD8959800AAF1D9 /* BeneficiosListCollectionViewController.m */,
 				7D0CA5791AD8722C00F19DFB /* BeneficiosMapViewController.h */,
 				7D0CA57A1AD8722C00F19DFB /* BeneficiosMapViewController.m */,
 				7D0CA57C1AD8842800F19DFB /* MenuTableViewCell.h */,
@@ -399,6 +402,7 @@
 				418AAD7A1AD844C400919B4D /* LNBenefitData.m in Sources */,
 				418AAD951AD8789800919B4D /* LNClubBackend.m in Sources */,
 				418AAD4F1AD83D1400919B4D /* main.m in Sources */,
+				41790E411AD8959800AAF1D9 /* BeneficiosListCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
