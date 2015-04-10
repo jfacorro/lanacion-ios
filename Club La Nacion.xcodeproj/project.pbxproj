@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21DCE304350AAE057478FDA7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68D3EB3F6EE7539B0DC2138A /* libPods.a */; };
+		41790E411AD8959800AAF1D9 /* BeneficiosListCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41790E401AD8959800AAF1D9 /* BeneficiosListCollectionViewController.m */; };
 		418AAD4F1AD83D1400919B4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 418AAD4E1AD83D1400919B4D /* main.m */; };
 		418AAD521AD83D1400919B4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 418AAD511AD83D1400919B4D /* AppDelegate.m */; };
 		418AAD551AD83D1400919B4D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 418AAD541AD83D1400919B4D /* ViewController.m */; };
@@ -19,16 +19,16 @@
 		418AAD771AD83D9D00919B4D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418AAD761AD83D9D00919B4D /* CoreLocation.framework */; };
 		418AAD7A1AD844C400919B4D /* LNBenefitData.m in Sources */ = {isa = PBXBuildFile; fileRef = 418AAD791AD844C400919B4D /* LNBenefitData.m */; };
 		418AAD7D1AD8456900919B4D /* LNBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 418AAD7C1AD8456900919B4D /* LNBusiness.m */; };
-		7D0CA5751AD86E6E00F19DFB /* MenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA5741AD86E6E00F19DFB /* MenuContainerViewController.m */; };
-		7D0CA5781AD8720300F19DFB /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA5771AD8720300F19DFB /* MenuTableViewController.m */; };
-		7D0CA57B1AD8722C00F19DFB /* BeneficiosMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA57A1AD8722C00F19DFB /* BeneficiosMapViewController.m */; };
-		7D0CA57E1AD8842800F19DFB /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA57D1AD8842800F19DFB /* MenuTableViewCell.m */; };
-		7D0CA5811AD8855400F19DFB /* UIColor+RGB.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA5801AD8855400F19DFB /* UIColor+RGB.m */; };
 		418AAD801AD8553E00919B4D /* NSDictionary+NullObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 418AAD7E1AD8553E00919B4D /* NSDictionary+NullObject.m */; };
 		418AAD831AD858B500919B4D /* NSDate+TimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 418AAD811AD858B500919B4D /* NSDate+TimeAgo.m */; };
 		418AAD861AD85D0800919B4D /* NSString+toDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 418AAD841AD85D0800919B4D /* NSString+toDate.m */; };
 		418AAD921AD877F000919B4D /* LNBenefitRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 418AAD911AD877F000919B4D /* LNBenefitRepository.m */; };
 		418AAD951AD8789800919B4D /* LNClubBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = 418AAD941AD8789800919B4D /* LNClubBackend.m */; };
+		7D0CA5751AD86E6E00F19DFB /* MenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA5741AD86E6E00F19DFB /* MenuContainerViewController.m */; };
+		7D0CA5781AD8720300F19DFB /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA5771AD8720300F19DFB /* MenuTableViewController.m */; };
+		7D0CA57B1AD8722C00F19DFB /* BeneficiosMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA57A1AD8722C00F19DFB /* BeneficiosMapViewController.m */; };
+		7D0CA57E1AD8842800F19DFB /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA57D1AD8842800F19DFB /* MenuTableViewCell.m */; };
+		7D0CA5811AD8855400F19DFB /* UIColor+RGB.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA5801AD8855400F19DFB /* UIColor+RGB.m */; };
 		B128F1E8E2CB0DB2B19B560C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE74D5252A9598D0927079F0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -43,8 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		26280FCAE72B8979FF001F5E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		287FD90E30A3D643ED976B56 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		41790E3F1AD8959800AAF1D9 /* BeneficiosListCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeneficiosListCollectionViewController.h; sourceTree = "<group>"; };
+		41790E401AD8959800AAF1D9 /* BeneficiosListCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeneficiosListCollectionViewController.m; sourceTree = "<group>"; };
 		418AAD491AD83D1400919B4D /* Club La Nacion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Club La Nacion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		418AAD4D1AD83D1400919B4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		418AAD4E1AD83D1400919B4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -76,9 +76,6 @@
 		418AAD931AD8789800919B4D /* LNClubBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNClubBackend.h; sourceTree = "<group>"; };
 		418AAD941AD8789800919B4D /* LNClubBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNClubBackend.m; sourceTree = "<group>"; };
 		4E326F5FDD290B4D11AAF39B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		93367FE6327B06579DF5677A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		CE74D5252A9598D0927079F0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		68D3EB3F6EE7539B0DC2138A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D0CA5731AD86E6E00F19DFB /* MenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuContainerViewController.h; sourceTree = "<group>"; };
 		7D0CA5741AD86E6E00F19DFB /* MenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuContainerViewController.m; sourceTree = "<group>"; };
 		7D0CA5761AD8720300F19DFB /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
@@ -89,6 +86,8 @@
 		7D0CA57D1AD8842800F19DFB /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
 		7D0CA57F1AD8855400F19DFB /* UIColor+RGB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RGB.h"; sourceTree = "<group>"; };
 		7D0CA5801AD8855400F19DFB /* UIColor+RGB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RGB.m"; sourceTree = "<group>"; };
+		93367FE6327B06579DF5677A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CE74D5252A9598D0927079F0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +149,8 @@
 				7D0CA5741AD86E6E00F19DFB /* MenuContainerViewController.m */,
 				7D0CA5761AD8720300F19DFB /* MenuTableViewController.h */,
 				7D0CA5771AD8720300F19DFB /* MenuTableViewController.m */,
+				41790E3F1AD8959800AAF1D9 /* BeneficiosListCollectionViewController.h */,
+				41790E401AD8959800AAF1D9 /* BeneficiosListCollectionViewController.m */,
 				7D0CA5791AD8722C00F19DFB /* BeneficiosMapViewController.h */,
 				7D0CA57A1AD8722C00F19DFB /* BeneficiosMapViewController.m */,
 				7D0CA57C1AD8842800F19DFB /* MenuTableViewCell.h */,
@@ -238,23 +239,6 @@
 				CE74D5252A9598D0927079F0 /* libPods.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		59B353F6D20C4CBA6300BAE4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				68D3EB3F6EE7539B0DC2138A /* libPods.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		90123E95AC6AB62D1638F9A3 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				26280FCAE72B8979FF001F5E /* Pods.debug.xcconfig */,
-				287FD90E30A3D643ED976B56 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,6 +392,7 @@
 				418AAD7A1AD844C400919B4D /* LNBenefitData.m in Sources */,
 				418AAD951AD8789800919B4D /* LNClubBackend.m in Sources */,
 				418AAD4F1AD83D1400919B4D /* main.m in Sources */,
+				41790E411AD8959800AAF1D9 /* BeneficiosListCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
