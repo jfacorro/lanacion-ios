@@ -29,6 +29,8 @@
 		7D0CA57B1AD8722C00F19DFB /* BeneficiosMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA57A1AD8722C00F19DFB /* BeneficiosMapViewController.m */; };
 		7D0CA57E1AD8842800F19DFB /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA57D1AD8842800F19DFB /* MenuTableViewCell.m */; };
 		7D0CA5811AD8855400F19DFB /* UIColor+RGB.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA5801AD8855400F19DFB /* UIColor+RGB.m */; };
+		7D0CA5841AD8953B00F19DFB /* BeneficiosListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA5831AD8953B00F19DFB /* BeneficiosListViewController.m */; };
+		7D0CA5871AD8958E00F19DFB /* BeneficioCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA5861AD8958E00F19DFB /* BeneficioCollectionViewCell.m */; };
 		B128F1E8E2CB0DB2B19B560C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE74D5252A9598D0927079F0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -43,8 +45,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		41790E3F1AD8959800AAF1D9 /* BeneficiosListCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeneficiosListCollectionViewController.h; sourceTree = "<group>"; };
-		41790E401AD8959800AAF1D9 /* BeneficiosListCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeneficiosListCollectionViewController.m; sourceTree = "<group>"; };
 		418AAD491AD83D1400919B4D /* Club La Nacion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Club La Nacion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		418AAD4D1AD83D1400919B4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		418AAD4E1AD83D1400919B4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -86,6 +86,10 @@
 		7D0CA57D1AD8842800F19DFB /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
 		7D0CA57F1AD8855400F19DFB /* UIColor+RGB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RGB.h"; sourceTree = "<group>"; };
 		7D0CA5801AD8855400F19DFB /* UIColor+RGB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RGB.m"; sourceTree = "<group>"; };
+		7D0CA5821AD8953B00F19DFB /* BeneficiosListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeneficiosListViewController.h; sourceTree = "<group>"; };
+		7D0CA5831AD8953B00F19DFB /* BeneficiosListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeneficiosListViewController.m; sourceTree = "<group>"; };
+		7D0CA5851AD8958E00F19DFB /* BeneficioCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeneficioCollectionViewCell.h; sourceTree = "<group>"; };
+		7D0CA5861AD8958E00F19DFB /* BeneficioCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeneficioCollectionViewCell.m; sourceTree = "<group>"; };
 		93367FE6327B06579DF5677A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CE74D5252A9598D0927079F0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -157,6 +161,10 @@
 				7D0CA57D1AD8842800F19DFB /* MenuTableViewCell.m */,
 				7D0CA57F1AD8855400F19DFB /* UIColor+RGB.h */,
 				7D0CA5801AD8855400F19DFB /* UIColor+RGB.m */,
+				7D0CA5821AD8953B00F19DFB /* BeneficiosListViewController.h */,
+				7D0CA5831AD8953B00F19DFB /* BeneficiosListViewController.m */,
+				7D0CA5851AD8958E00F19DFB /* BeneficioCollectionViewCell.h */,
+				7D0CA5861AD8958E00F19DFB /* BeneficioCollectionViewCell.m */,
 			);
 			path = "Club La Nacion";
 			sourceTree = "<group>";
@@ -379,6 +387,7 @@
 				7D0CA5781AD8720300F19DFB /* MenuTableViewController.m in Sources */,
 				7D0CA5751AD86E6E00F19DFB /* MenuContainerViewController.m in Sources */,
 				7D0CA57E1AD8842800F19DFB /* MenuTableViewCell.m in Sources */,
+				7D0CA5871AD8958E00F19DFB /* BeneficioCollectionViewCell.m in Sources */,
 				7D0CA57B1AD8722C00F19DFB /* BeneficiosMapViewController.m in Sources */,
 				418AAD801AD8553E00919B4D /* NSDictionary+NullObject.m in Sources */,
 				418AAD861AD85D0800919B4D /* NSString+toDate.m in Sources */,
@@ -389,6 +398,7 @@
 				418AAD831AD858B500919B4D /* NSDate+TimeAgo.m in Sources */,
 				418AAD521AD83D1400919B4D /* AppDelegate.m in Sources */,
 				418AAD7D1AD8456900919B4D /* LNBusiness.m in Sources */,
+				7D0CA5841AD8953B00F19DFB /* BeneficiosListViewController.m in Sources */,
 				418AAD7A1AD844C400919B4D /* LNBenefitData.m in Sources */,
 				418AAD951AD8789800919B4D /* LNClubBackend.m in Sources */,
 				418AAD4F1AD83D1400919B4D /* main.m in Sources */,
