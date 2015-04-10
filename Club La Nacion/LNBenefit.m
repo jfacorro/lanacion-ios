@@ -24,7 +24,6 @@
         [self setValue:[benefitDictionary objectForKey:keyString] forKey:keyString];
     }
     
-    self.benefitBusiness = 
     return benefit;
 }
 @end

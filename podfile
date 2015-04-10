@@ -1,1 +1,2 @@
 pod "IKJayma"
+pod 'SWRevealViewController', :git => 'https://github.com/nirbhayg/SWRevealViewController'
