@@ -8,16 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import "IJAbstractDocument.h"
 @class LNBenefitData,LNBusiness;
 
-@interface LNBenefit : NSObject
+@interface LNBenefit : IJAbstractDocument
 @property (nonatomic,strong)NSString *benefitId;
-@property (nonatomic,strong)CLLocation *benefitLocation;
-@property (nonatomic,strong)LNBenefitData *benefitData;
-@property (nonatomic,strong)LNBusiness *benefitBusiness;
-@property (nonatomic,strong)NSString *benefitImageString;
+@property (nonatomic,strong)NSArray *benefitImages;
 @property (nonatomic,strong)NSDate * benefitSinceDate;
 @property (nonatomic,strong)NSDate * benefitToDate;
+
+@property (nonatomic,strong)LNBenefitData *benefitData;
+@property (nonatomic,strong)LNBusiness *benefitBusiness;
+@property (nonatomic,strong)CLLocation *benefitLocation;
 
 +(LNBenefit *)benefitWithDictionary:(NSDictionary *)benefitDictionary;
 

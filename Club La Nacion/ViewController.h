@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class LNClubBackend, LNBenefitRepository;
+
 @interface ViewController : UIViewController
+@property (nonatomic,strong) LNClubBackend * backend;
+@property (nonatomic,strong) LNBenefitRepository * repository;
 
 
 @end
