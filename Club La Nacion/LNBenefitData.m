@@ -10,4 +10,25 @@
 
 @implementation LNBenefitData
 
++(LNBenefitData *)benefitDataWithDictionary:(NSDictionary *)benefitDataDictionary
+{
+    LNBenefitData *benefitData = [[LNBenefitData alloc] init];
+    
+    for (NSString * keyString in benefitDataDictionary.allKeys)
+    {
+        
+        NSLog(@"%@",keyString);
+        if ([keyString isEqualToString:@"id"])
+        {
+            benefitData.benefitDataId = [benefitDataDictionary[keyString] integerValue];
+            continue;
+        }else
+        {
+            [benefitData setValue:benefitDataDictionary[keyString] forKey:keyString];
+        }
+    }
+    
+    return benefitData;
+}
+
 @end

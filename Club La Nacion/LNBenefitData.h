@@ -10,4 +10,14 @@
 
 @interface LNBenefitData : NSObject
 
+@property (nonatomic)NSInteger benefitDataId;
+@property (nonatomic,strong)NSString *nombre;
+@property (nonatomic,strong)NSString *categoria;
+@property (nonatomic,strong)NSString *subcategoria;
+@property (nonatomic,strong)NSString *descripcion;
+@property (nonatomic,strong)NSString *tipo;
+@property (nonatomic,strong)NSString *tarjeta;
+
++(LNBenefitData *)benefitDataWithDictionary:(NSDictionary *)benefitDataDictionary;
+
 @end

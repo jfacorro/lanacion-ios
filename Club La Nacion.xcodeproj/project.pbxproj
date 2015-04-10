@@ -24,6 +24,12 @@
 		7D0CA57B1AD8722C00F19DFB /* BeneficiosMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA57A1AD8722C00F19DFB /* BeneficiosMapViewController.m */; };
 		7D0CA57E1AD8842800F19DFB /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA57D1AD8842800F19DFB /* MenuTableViewCell.m */; };
 		7D0CA5811AD8855400F19DFB /* UIColor+RGB.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA5801AD8855400F19DFB /* UIColor+RGB.m */; };
+		418AAD801AD8553E00919B4D /* NSDictionary+NullObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 418AAD7E1AD8553E00919B4D /* NSDictionary+NullObject.m */; };
+		418AAD831AD858B500919B4D /* NSDate+TimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 418AAD811AD858B500919B4D /* NSDate+TimeAgo.m */; };
+		418AAD861AD85D0800919B4D /* NSString+toDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 418AAD841AD85D0800919B4D /* NSString+toDate.m */; };
+		418AAD921AD877F000919B4D /* LNBenefitRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 418AAD911AD877F000919B4D /* LNBenefitRepository.m */; };
+		418AAD951AD8789800919B4D /* LNClubBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = 418AAD941AD8789800919B4D /* LNClubBackend.m */; };
+		B128F1E8E2CB0DB2B19B560C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE74D5252A9598D0927079F0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +65,19 @@
 		418AAD791AD844C400919B4D /* LNBenefitData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNBenefitData.m; sourceTree = "<group>"; };
 		418AAD7B1AD8456900919B4D /* LNBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNBusiness.h; sourceTree = "<group>"; };
 		418AAD7C1AD8456900919B4D /* LNBusiness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNBusiness.m; sourceTree = "<group>"; };
+		418AAD7E1AD8553E00919B4D /* NSDictionary+NullObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NullObject.m"; sourceTree = "<group>"; };
+		418AAD7F1AD8553E00919B4D /* NSDictionary+NullObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NullObject.h"; sourceTree = "<group>"; };
+		418AAD811AD858B500919B4D /* NSDate+TimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TimeAgo.m"; sourceTree = "<group>"; };
+		418AAD821AD858B500919B4D /* NSDate+TimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TimeAgo.h"; sourceTree = "<group>"; };
+		418AAD841AD85D0800919B4D /* NSString+toDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+toDate.m"; sourceTree = "<group>"; };
+		418AAD851AD85D0800919B4D /* NSString+toDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+toDate.h"; sourceTree = "<group>"; };
+		418AAD901AD877F000919B4D /* LNBenefitRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNBenefitRepository.h; sourceTree = "<group>"; };
+		418AAD911AD877F000919B4D /* LNBenefitRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNBenefitRepository.m; sourceTree = "<group>"; };
+		418AAD931AD8789800919B4D /* LNClubBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNClubBackend.h; sourceTree = "<group>"; };
+		418AAD941AD8789800919B4D /* LNClubBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNClubBackend.m; sourceTree = "<group>"; };
+		4E326F5FDD290B4D11AAF39B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		93367FE6327B06579DF5677A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CE74D5252A9598D0927079F0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		68D3EB3F6EE7539B0DC2138A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D0CA5731AD86E6E00F19DFB /* MenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuContainerViewController.h; sourceTree = "<group>"; };
 		7D0CA5741AD86E6E00F19DFB /* MenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuContainerViewController.m; sourceTree = "<group>"; };
@@ -78,7 +97,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				418AAD771AD83D9D00919B4D /* CoreLocation.framework in Frameworks */,
-				21DCE304350AAE057478FDA7 /* libPods.a in Frameworks */,
+				B128F1E8E2CB0DB2B19B560C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,8 +118,8 @@
 				418AAD4B1AD83D1400919B4D /* Club La Nacion */,
 				418AAD651AD83D1500919B4D /* Club La NacionTests */,
 				418AAD4A1AD83D1400919B4D /* Products */,
-				90123E95AC6AB62D1638F9A3 /* Pods */,
-				59B353F6D20C4CBA6300BAE4 /* Frameworks */,
+				7017C64887BA67D56C9EDAFA /* Pods */,
+				F132C1EA1031FDB28BD36967 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +135,8 @@
 		418AAD4B1AD83D1400919B4D /* Club La Nacion */ = {
 			isa = PBXGroup;
 			children = (
+				418AAD881AD876E300919B4D /* IKJayma */,
+				418AAD871AD8767800919B4D /* Extras */,
 				418AAD721AD83D2200919B4D /* Model Objects */,
 				418AAD501AD83D1400919B4D /* AppDelegate.h */,
 				418AAD511AD83D1400919B4D /* AppDelegate.m */,
@@ -178,6 +199,47 @@
 			name = "Model Objects";
 			sourceTree = "<group>";
 		};
+		418AAD871AD8767800919B4D /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				418AAD841AD85D0800919B4D /* NSString+toDate.m */,
+				418AAD851AD85D0800919B4D /* NSString+toDate.h */,
+				418AAD811AD858B500919B4D /* NSDate+TimeAgo.m */,
+				418AAD821AD858B500919B4D /* NSDate+TimeAgo.h */,
+				418AAD7E1AD8553E00919B4D /* NSDictionary+NullObject.m */,
+				418AAD7F1AD8553E00919B4D /* NSDictionary+NullObject.h */,
+			);
+			name = Extras;
+			sourceTree = "<group>";
+		};
+		418AAD881AD876E300919B4D /* IKJayma */ = {
+			isa = PBXGroup;
+			children = (
+				418AAD931AD8789800919B4D /* LNClubBackend.h */,
+				418AAD941AD8789800919B4D /* LNClubBackend.m */,
+				418AAD901AD877F000919B4D /* LNBenefitRepository.h */,
+				418AAD911AD877F000919B4D /* LNBenefitRepository.m */,
+			);
+			name = IKJayma;
+			sourceTree = "<group>";
+		};
+		7017C64887BA67D56C9EDAFA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E326F5FDD290B4D11AAF39B /* Pods.debug.xcconfig */,
+				93367FE6327B06579DF5677A /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F132C1EA1031FDB28BD36967 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE74D5252A9598D0927079F0 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		59B353F6D20C4CBA6300BAE4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,11 +264,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 418AAD6C1AD83D1500919B4D /* Build configuration list for PBXNativeTarget "Club La Nacion" */;
 			buildPhases = (
-				299910420C36559BCC5616A1 /* Check Pods Manifest.lock */,
+				292CE62FA4FDE8CCD52FCE61 /* Check Pods Manifest.lock */,
 				418AAD451AD83D1400919B4D /* Sources */,
 				418AAD461AD83D1400919B4D /* Frameworks */,
 				418AAD471AD83D1400919B4D /* Resources */,
-				BBE6ABD1929A8FCCE8A81241 /* Copy Pods Resources */,
+				2BED5279634887209CF6B384 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -293,7 +355,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		299910420C36559BCC5616A1 /* Check Pods Manifest.lock */ = {
+		292CE62FA4FDE8CCD52FCE61 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -308,7 +370,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		BBE6ABD1929A8FCCE8A81241 /* Copy Pods Resources */ = {
+		2BED5279634887209CF6B384 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -334,12 +396,17 @@
 				7D0CA5751AD86E6E00F19DFB /* MenuContainerViewController.m in Sources */,
 				7D0CA57E1AD8842800F19DFB /* MenuTableViewCell.m in Sources */,
 				7D0CA57B1AD8722C00F19DFB /* BeneficiosMapViewController.m in Sources */,
+				418AAD801AD8553E00919B4D /* NSDictionary+NullObject.m in Sources */,
+				418AAD861AD85D0800919B4D /* NSString+toDate.m in Sources */,
+				418AAD921AD877F000919B4D /* LNBenefitRepository.m in Sources */,
 				418AAD551AD83D1400919B4D /* ViewController.m in Sources */,
 				7D0CA5811AD8855400F19DFB /* UIColor+RGB.m in Sources */,
 				418AAD751AD83D5500919B4D /* LNBenefit.m in Sources */,
+				418AAD831AD858B500919B4D /* NSDate+TimeAgo.m in Sources */,
 				418AAD521AD83D1400919B4D /* AppDelegate.m in Sources */,
 				418AAD7D1AD8456900919B4D /* LNBusiness.m in Sources */,
 				418AAD7A1AD844C400919B4D /* LNBenefitData.m in Sources */,
+				418AAD951AD8789800919B4D /* LNClubBackend.m in Sources */,
 				418AAD4F1AD83D1400919B4D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,7 +527,7 @@
 		};
 		418AAD6D1AD83D1500919B4D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26280FCAE72B8979FF001F5E /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 4E326F5FDD290B4D11AAF39B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Club La Nacion/Info.plist";
@@ -471,7 +538,7 @@
 		};
 		418AAD6E1AD83D1500919B4D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 287FD90E30A3D643ED976B56 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 93367FE6327B06579DF5677A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Club La Nacion/Info.plist";

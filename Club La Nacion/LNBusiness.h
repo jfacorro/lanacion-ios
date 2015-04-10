@@ -10,4 +10,13 @@
 
 @interface LNBusiness : NSObject
 
+@property (nonatomic)NSInteger businessId;
+@property (nonatomic,strong)NSString *sucursal;
+@property (nonatomic,strong)NSString *nombre;
+@property (nonatomic,strong)NSString *detalle;
+@property (nonatomic,strong)NSString *descripcion;
+@property (nonatomic,strong)NSString *direccion;
+
++(LNBusiness *)businessWithDictionary:(NSDictionary *)businessDictionary;
+
 @end
