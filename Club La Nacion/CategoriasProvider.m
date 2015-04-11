@@ -10,8 +10,14 @@
 #import "UIColor+RGB.h"
 
 @implementation CategoriasProvider
-
-+ (UIColor*) colorForCategoria:(BeneficiosCategoriasEnum) categoria
++ (UIColor*) colorForCategoria:(BeneficiosCategoriasEnum)categoria withAlpha:(CGFloat)alpha
+{
+    UIColor * color = [self colorForCategoria:categoria];
+    
+    return [color colorWithAlphaComponent:alpha];
+//    color.
+}
++ (UIColor*) colorForCategoria:(BeneficiosCategoriasEnum)categoria
 {
     switch (categoria) {
         case MenuOptionsCategorias_Gastronomia:

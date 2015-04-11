@@ -81,7 +81,7 @@ typedef enum
         case MenuOptionsSections_Mapa:
             [cell setCategoria:MenuOptionsCategorias_invalid];
             cell.menuImageView.image = [UIImage imageNamed:@"map pin"];
-            cell.menuLabel.textColor = [UIColor colorWithRed:255.0/255.0 green:0.0/255.0 blue:0.0/255.0 alpha:1.0];
+            cell.menuLabel.textColor = [UIColor redColor];
             [cell.menuLabel setText:@"Cerca tuyo"];
             break;
             

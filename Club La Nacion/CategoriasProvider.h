@@ -13,6 +13,7 @@
 @interface CategoriasProvider : NSObject
 
 + (BeneficiosCategoriasEnum) categoriaByDescription:(NSString*) description;
++ (UIColor*) colorForCategoria:(BeneficiosCategoriasEnum)categoria withAlpha:(CGFloat)alpha;
 + (UIColor*) colorForCategoria:(BeneficiosCategoriasEnum) categoria;
 + (NSString*) descriptionForCategoria:(BeneficiosCategoriasEnum) categoria;
 + (UIImage*) pinForCategoria:(BeneficiosCategoriasEnum) categoria;
