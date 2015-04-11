@@ -1,2 +1,4 @@
+link_with 'Club La Nacion', 'Club La Nacion widget'
+
 pod "IKJayma"
 pod 'SWRevealViewController', :git => 'https://github.com/nirbhayg/SWRevealViewController'

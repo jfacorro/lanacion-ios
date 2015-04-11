@@ -94,7 +94,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="200"/>
                     <connections>
-                        <outlet property="listView" destination="KdL-be-gEl" id="8lU-wF-wyc"/>
+                        <outlet property="collectionView" destination="KdL-be-gEl" id="Vhb-l4-15N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>

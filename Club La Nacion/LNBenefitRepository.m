@@ -18,9 +18,9 @@
     }
     return self;
 }
+
 -(id<IJDocumentProtocol>)writeDocumentWithResponseObject:(NSDictionary *)responseObject
 {
-    
     return [LNBenefit benefitWithDictionary:responseObject];
 }
 @end

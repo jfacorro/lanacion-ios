@@ -30,7 +30,8 @@
     {
         self.backend = [[LNClubBackend alloc]init];
         self.repository = [[LNBenefitRepository alloc]initWithBackend:self.backend];
-        self.repository.serverUrl = @"http://lanacion.herokuapp.com/api";
+//        self.repository.serverUrl = @"http://lanacion.herokuapp.com/api";
+        self.repository.serverUrl = @"http://23.23.128.233:8080/api";
     }
     
     return self;
@@ -44,8 +45,8 @@
         self.benefitsArray = [NSArray arrayWithArray:documents];
         [self.delegate BeneficiosManager:self updatedBeneficios:self.benefitsArray];
     } failure:^(IJError *error) {
-        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Ocurrio un error. Intente de nuevo" delegate:self cancelButtonTitle:@"Aceptar" otherButtonTitles:nil];
-        [alert show];
+        //UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Ocurrio un error. Intente de nuevo" delegate:self cancelButtonTitle:@"Aceptar" otherButtonTitles:nil];
+        //[alert show];
         NSLog(@"failure");
     }];
 }
@@ -58,8 +59,8 @@
         self.benefitsArray = [NSArray arrayWithArray:documents];
         [self.delegate BeneficiosManager:self updatedBeneficios:self.benefitsArray];
     } failure:^(IJError *error) {
-        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Ocurrio un error. Intente de nuevo" delegate:self cancelButtonTitle:@"Aceptar" otherButtonTitles:nil];
-        [alert show];
+        //UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Ocurrio un error. Intente de nuevo" delegate:self cancelButtonTitle:@"Aceptar" otherButtonTitles:nil];
+        //[alert show];
         NSLog(@"failure");
     }];
 }

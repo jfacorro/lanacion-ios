@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LNBenefit.h"
 
 @interface TodayCollectionViewCell : UICollectionViewCell
+
+@property (nonatomic, strong) LNBenefit* beneficio;
 
 @end
