@@ -1,7 +1,9 @@
 #import "BeneficiosListCollectionViewController.h"
 #import "LNClubBackend.h"
 #import "LNBenefitRepository.h"
-    
+#import "BeneficioCollectionViewCell.h"
+#import "CategoriasProvider.h"
+
 @interface BeneficiosListCollectionViewController ()
 @property (nonatomic,strong) LNClubBackend *backend;
 @property (nonatomic,strong) LNBenefitRepository *repository;
@@ -27,10 +29,13 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
+    
+    [self retrieveBenefits];
 }
+
 - (void)retrieveBenefits
 {
-    NSString *parametersPath = @"Cuidado%20Personal";
+    NSString *parametersPath = [[CategoriasProvider descriptionForCategoria:self.categoria] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     self.repository.basePath = [self.repository.basePath stringByAppendingString:parametersPath];
     [self.repository findAllDocumentsWithSuccess:^(NSArray *documents) {
         self.benefitsArray = [NSArray arrayWithArray:documents];
@@ -72,8 +77,9 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    BeneficioCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"BeneficioCell" forIndexPath:indexPath];
     
+    [cell setBeneficio:[self.benefitsArray objectAtIndex:indexPath.row]];
     // Configure the cell
     
     return cell;

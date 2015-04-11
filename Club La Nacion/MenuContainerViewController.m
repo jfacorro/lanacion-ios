@@ -9,6 +9,7 @@
 #import "MenuContainerViewController.h"
 #import "MenuTableViewController.h"
 #import "BeneficiosMapViewController.h"
+#import "BeneficiosListCollectionViewController.h"
 
 @interface MenuContainerViewController ()
 
@@ -40,6 +41,7 @@
     
     self.menuView = [storyboard instantiateViewControllerWithIdentifier:@"MenuTableViewController"];
     
+    [self.menuView setDelegate:self];
     [self setRearViewController:self.menuView];
     self.shouldUseFrontViewOverlay = YES;
 
@@ -62,6 +64,47 @@
     [self revealToggle:self];
 }
 
+
+#pragma mark - Navigation Delegate
+
+- (void) showMapa
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    BeneficiosMapViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"BeneficiosMapViewController"];
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
+    [self setFrontViewController:navController];
+    
+    [controller.navigationItem setLeftBarButtonItem:[self leftBarButton]];
+    [controller.navigationController.navigationBar setTintColor:[UIColor blackColor]];
+    
+    [self revealToggle:self];
+
+
+}
+
+- (void) showConfiguracion
+{
+    
+    [self revealToggle:self];
+}
+
+- (void) showBeneficios:(BeneficiosCategoriasEnum) categoria
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    BeneficiosListCollectionViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"BeneficiosListCollectionViewController"];
+    
+    [controller setCategoria:categoria];
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
+    [self setFrontViewController:navController];
+    
+    [controller.navigationItem setLeftBarButtonItem:[self leftBarButton]];
+    [controller.navigationController.navigationBar setTintColor:[UIColor blackColor]];
+    
+    
+    [self revealToggle:self];
+}
 /*
 #pragma mark - Navigation
 
