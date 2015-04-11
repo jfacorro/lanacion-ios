@@ -10,8 +10,9 @@
 #import <AFNetworking/UIImageView+AFNetworking.h>
 #import "NSDate+TimeAgo.h"
 #import <MapKit/MapKit.h>
+#import "CategoriasProvider.h"
 
-@interface BenefitDetailsViewController ()
+@interface BenefitDetailsViewController () <MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *benefitCategoriesLabel;
 @property (weak, nonatomic) IBOutlet UILabel *benefitDisscountLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *benefitImageView;
@@ -21,6 +22,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *benefitDescriptionLabel;
 @property (weak, nonatomic) IBOutlet MKMapView *locationMapViewController;
 @property (weak, nonatomic) IBOutlet UILabel *benefitBusinessAddressLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *benefitMapMarker;
+
 
 @end
 
@@ -39,11 +42,21 @@
 
 - (void)setOutletsValues
 {
-    self.benefitCategoriesLabel.text = [NSString stringWithFormat:@"%@ - %@",self.benefit.benefitData.categoria,self.benefit.benefitData.subcategoria];
+    [self setTitle:self.benefit.benefitData.nombre];
+    
+    self.benefitCategoriesLabel.text = self.benefit.benefitData.subcategoria;
+    self.benefitCategoriesLabel.textColor = [CategoriasProvider colorForCategoria:[CategoriasProvider categoriaByDescription:self.benefit.benefitData.categoria]];
+    
     self.benefitDisscountLabel.text = self.benefit.benefitData.tipo;
     [self.benefitImageView setImageWithURL:[NSURL URLWithString:[self.benefit.benefitImages firstObject]]];
-    self.benefitExpirationDateLabel.text = [self.benefit.benefitToDate timeToExpireText];
-
+    if([self.benefit.benefitToDate secondsToExpire] > 0)
+    {
+        self.benefitExpirationDateLabel.text = [NSString stringWithFormat:@"Termina en %@",[self.benefit.benefitToDate timeToExpireText]];
+    }
+    else
+        self.benefitExpirationDateLabel.text = @"Finalizado";
+     
+    
     if (![self.benefit.benefitData.tarjeta containsString:@"classic"])
     {
         self.benefitClassicCardImageView.alpha = 0.15f;
@@ -53,9 +66,46 @@
         self.benefitPremiumCardImageView.alpha = 0.15f;
     }
     
+    self.locationMapViewController.delegate = self;
+    
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2DMake(self.benefit.benefitLocation.coordinate.latitude, self.benefit.benefitLocation.coordinate.longitude), 500, 500);
+    MKCoordinateRegion adjustedRegion = [self.locationMapViewController regionThatFits:viewRegion];
+    [self.locationMapViewController setRegion:adjustedRegion animated:YES];
+    self.locationMapViewController.showsUserLocation = NO;
+
     self.benefitDescriptionLabel.text = self.benefit.benefitData.descripcion;
-    self.locationMapViewController.centerCoordinate = CLLocationCoordinate2DMake(self.benefit.benefitLocation.coordinate.latitude, self.benefit.benefitLocation.coordinate.longitude);
+    [self.locationMapViewController addAnnotation:self.benefit];
     self.benefitBusinessAddressLabel.text = self.benefit.benefitBusiness.direccion;
+}
+
+-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    if ([annotation isKindOfClass:[MKUserLocation class]])
+        return nil;
+    
+    static NSString* AnnotationIdentifier = @"AnnotationIdentifier";
+    MKAnnotationView* pinView = [[MKAnnotationView alloc]
+                                 initWithAnnotation:annotation reuseIdentifier:AnnotationIdentifier];
+    pinView.canShowCallout=YES;
+    
+    self.benefitMapMarker.image =[CategoriasProvider pinForCategoria:[CategoriasProvider categoriaByDescription:((LNBenefit*)annotation).benefitData.categoria]];
+    
+    pinView.image =self.benefitMapMarker.image;
+    pinView.enabled = YES;
+    pinView.canShowCallout = YES;
+    
+    UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    [rightButton setTitle:annotation.title forState:UIControlStateNormal];
+    [rightButton addTarget:self
+                    action:@selector(showDetails)
+          forControlEvents:UIControlEventTouchUpInside];
+    
+    pinView.rightCalloutAccessoryView = rightButton;
+    
+    //    UIImageView *profileIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rest_image2.png"]];
+    //    pinView.leftCalloutAccessoryView = profileIconView;
+    
+    return pinView;
 }
 
 /*

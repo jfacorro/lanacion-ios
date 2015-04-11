@@ -29,30 +29,37 @@
     return @"1+S";
 }
 
+- (NSTimeInterval) secondsToExpire
+{
+    NSTimeInterval delta = [self timeIntervalSinceDate:[NSDate date]] * (-1); // in seconds
+
+    return delta;
+}
+
 #pragma mark - Private
 
 - (NSString *)secondsStringWithDelta:(NSTimeInterval)delta
 {
     NSInteger seconds = (NSInteger)delta;
-    return [NSString stringWithFormat:@"%lds", seconds];
+    return [NSString stringWithFormat:@"%ld segundos", seconds];
 }
 
 - (NSString *)minutesStringWithDelta:(NSTimeInterval)delta
 {
     NSInteger minutes = (NSInteger)(delta/60.);
-    return [NSString stringWithFormat:@"%ldm", minutes];
+    return [NSString stringWithFormat:@"%ld minutos", minutes];
 }
 
 - (NSString *)hoursStringWithDelta:(NSTimeInterval)delta
 {
     NSInteger hours = (NSInteger)(delta/3600.);
-    return [NSString stringWithFormat:@"%ldh", hours];
+    return [NSString stringWithFormat:@"%ld horas", hours];
 }
 
 - (NSString *)daysStringWithDelta:(NSTimeInterval)delta
 {
     NSInteger days = (NSInteger)(delta/86400.);
-    return [NSString stringWithFormat:@"%ldd", days];
+    return [NSString stringWithFormat:@"%ld dias", days];
 }
 
 - (NSString *)olderDateString
