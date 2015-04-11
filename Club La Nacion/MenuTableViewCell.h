@@ -11,6 +11,7 @@
 
 @interface MenuTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *menuImageView;
 @property (nonatomic, strong) IBOutlet UILabel* menuLabel;
 @property (nonatomic, assign) BeneficiosCategoriasEnum categoria;
 
