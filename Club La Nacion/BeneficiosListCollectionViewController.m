@@ -3,6 +3,7 @@
 #import "LNBenefitRepository.h"
 #import "BeneficioCollectionViewCell.h"
 #import "CategoriasProvider.h"
+#import "BenefitDetailsViewController.h"
 
 @interface BeneficiosListCollectionViewController ()
 @property (nonatomic,strong) LNClubBackend *backend;
@@ -18,7 +19,7 @@
     
     self.backend = [[LNClubBackend alloc]init];
     self.repository = [[LNBenefitRepository alloc]initWithBackend:self.backend];
-    self.repository.serverUrl = @"http://http://lanacion.herokuapp.com/api";
+    self.repository.serverUrl = @"http://lanacion.herokuapp.com/api";
     self.repository.basePath = @"categoria/";
     
     [self retrieveBenefits];
@@ -80,7 +81,16 @@
 }
 
 #pragma mark <UICollectionViewDelegate>
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    BenefitDetailsViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"BenefitDetailsViewController"];
+    
+    [controller setBenefit:[self.benefitsArray objectAtIndex:indexPath.row]];
+    
+    [self.navigationController pushViewController:controller animated:YES];
 
+}
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {

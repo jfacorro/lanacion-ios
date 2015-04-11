@@ -7,6 +7,9 @@
 //
 
 #import "BenefitDetailsViewController.h"
+#import <AFNetworking/UIImageView+AFNetworking.h>
+#import "NSDate+TimeAgo.h"
+#import <MapKit/MapKit.h>
 
 @interface BenefitDetailsViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *benefitCategoriesLabel;
@@ -25,12 +28,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setOutletsValues];
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)setOutletsValues
+{
+    self.benefitCategoriesLabel.text = [NSString stringWithFormat:@"%@ - %@",self.benefit.benefitData.categoria,self.benefit.benefitData.subcategoria];
+    self.benefitDisscountLabel.text = self.benefit.benefitData.tipo;
+    [self.benefitImageView setImageWithURL:[NSURL URLWithString:[self.benefit.benefitImages firstObject]]];
+    self.benefitExpirationDateLabel.text = [self.benefit.benefitToDate timeToExpireText];
+
+    if (![self.benefit.benefitData.tarjeta containsString:@"classic"])
+    {
+        self.benefitClassicCardImageView.alpha = 0.15f;
+    }
+    if (![self.benefit.benefitData.tarjeta containsString:@"premium"])
+    {
+        self.benefitPremiumCardImageView.alpha = 0.15f;
+    }
+    
+    self.benefitDescriptionLabel.text = self.benefit.benefitData.descripcion;
+    self.locationMapViewController.centerCoordinate = CLLocationCoordinate2DMake(self.benefit.benefitLocation.coordinate.latitude, self.benefit.benefitLocation.coordinate.longitude);
+    self.benefitBusinessAddressLabel.text = self.benefit.benefitBusiness.direccion;
 }
 
 /*
