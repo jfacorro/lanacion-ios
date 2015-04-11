@@ -61,6 +61,7 @@
     CGRect detailFrame = self.mapDetailView.frame;
     CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
     detailFrame.origin.y = screenHeight + 1;
+    detailFrame.size.width = [[UIScreen mainScreen] bounds].size.width;
     self.mapDetailView.frame = detailFrame;
     [self.view addSubview:self.mapDetailView];
 }
