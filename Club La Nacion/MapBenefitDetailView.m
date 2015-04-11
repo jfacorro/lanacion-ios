@@ -36,6 +36,8 @@
     self.benefitDisscountLabel.text = self.benefit.benefitData.tipo;
     self.benefitCategoryAndNameLabel.text = [NSString stringWithFormat:@"%@ - %@",self.benefit.benefitData.categoria, self.benefit.benefitData.nombre];
     
+    self.benefitCategoryAndNameLabel.textColor = [CategoriasProvider colorForCategoria:[CategoriasProvider categoriaByDescription:self.benefit.benefitData.categoria]];
+    
     self.benefitMapPinImageView.image =[CategoriasProvider pinForCategoria:[CategoriasProvider categoriaByDescription:self.benefit.benefitData.categoria]];
     self.benefitBusinessAddressLabel.text = self.benefit.benefitBusiness.direccion;
     self.benefitBusinesNameLabel.text = self.benefit.benefitBusiness.nombre;
@@ -44,10 +46,17 @@
     if (![[self.benefit.benefitData.tarjeta lowercaseString] containsString:@"classic"])
     {
         self.benefitClassicCardImageView.alpha = 0.35f;
+    }else
+    {
+        self.benefitClassicCardImageView.alpha = 1.0f;
     }
+    
     if (![[self.benefit.benefitData.tarjeta lowercaseString] containsString:@"premium"])
     {
         self.benefitPremiumCardImageView.alpha = 0.35f;
+    }else
+    {
+        self.benefitPremiumCardImageView.alpha = 1.0f;
     }
     
 }
@@ -62,6 +71,9 @@
     self.frame = viewFrame;
     
     [UIView commitAnimations];
+}
+- (IBAction)showBenefitDetail:(id)sender {
+    [self.delegate showBenefitDetails:self.benefit];
 }
 /*
 // Only override drawRect: if you perform custom drawing.

@@ -15,8 +15,9 @@
 #import "LNBenefitRepository.h"
 #import "LNBenefit.h"
 #import "MapBenefitDetailView.h"
+#import "BenefitDetailsViewController.h"
 
-@interface BeneficiosMapViewController () <MKMapViewDelegate,BeneficiosManagerDelegate>
+@interface BeneficiosMapViewController () <MKMapViewDelegate,BeneficiosManagerDelegate, MapDetailDelegate>
 
 @property (nonatomic, strong) CLLocationManager* locationManager;
 @property (nonatomic, strong) BeneficiosManager* beneficiosManager;
@@ -54,6 +55,7 @@
 - (void)createMapDetailView
 {
     self.mapDetailView = [MapBenefitDetailView view];
+    self.mapDetailView.delegate = self;
     CGRect detailFrame = self.mapDetailView.frame;
     CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
     detailFrame.origin.y = screenHeight + 1;
@@ -143,18 +145,14 @@
     }
     [UIView commitAnimations];
 }
-- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+-(void)showBenefitDetails:(LNBenefit *)benefit
 {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    BenefitDetailsViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"BenefitDetailsViewController"];
+    
+    [controller setBenefit:benefit];
+    
+    [self.navigationController pushViewController:controller animated:YES];
     
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

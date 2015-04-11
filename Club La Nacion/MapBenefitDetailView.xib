@@ -85,6 +85,15 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64O-4v-Obo">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="showBenefitDetail:" destination="iN0-l3-epB" eventType="touchUpInside" id="Yjb-at-gXs"/>
+                    </connections>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMg-AG-iLA">
                     <rect key="frame" x="222" y="0.0" width="98" height="34"/>
                     <constraints>
@@ -140,12 +149,12 @@
                 <outlet property="benefitMapPinImageView" destination="PRi-ka-nsm" id="GjP-Da-GIj"/>
                 <outlet property="benefitPremiumCardImageView" destination="8q4-Oo-p9z" id="H77-pl-yeg"/>
             </connections>
-            <point key="canvasLocation" x="71" y="88"/>
+            <point key="canvasLocation" x="-45" y="67"/>
         </view>
     </objects>
     <resources>
         <image name="classic" width="228" height="146"/>
-        <image name="map pin" width="70" height="112"/>
+        <image name="map pin" width="25" height="31"/>
         <image name="mapDetailsBackground" width="876" height="186"/>
         <image name="premium" width="228" height="146"/>
     </resources>
