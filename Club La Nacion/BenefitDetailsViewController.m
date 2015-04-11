@@ -45,7 +45,7 @@
     [self setTitle:self.benefit.benefitData.nombre];
     
     self.benefitCategoriesLabel.text = self.benefit.benefitData.subcategoria;
-    self.benefitCategoriesLabel.textColor = [CategoriasProvider colorForCategoria:[CategoriasProvider categoriaByDescription:self.benefit.benefitData.categoria]];
+    self.benefitCategoriesLabel.textColor = [CategoriasProvider colorForCategoria:[CategoriasProvider categoriaByDescription:self.benefit.benefitData.categoria] withAlpha:0.75];
     
     self.benefitDisscountLabel.text = self.benefit.benefitData.tipo;
     [self.benefitImageView setImageWithURL:[NSURL URLWithString:[self.benefit.benefitImages firstObject]]];
