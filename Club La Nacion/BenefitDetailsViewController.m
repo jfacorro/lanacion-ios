@@ -57,7 +57,7 @@
         self.benefitExpirationDateLabel.text = @"Finalizado";
      
     
-    if (![self.benefit.benefitData.tarjeta containsString:@"classic"])
+    if (![[self.benefit.benefitData.tarjeta lowercaseString] containsString:@"classic"])
     {
         self.benefitClassicCardImageView.alpha = 0.15f;
     }
