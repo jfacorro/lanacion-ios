@@ -7,7 +7,7 @@
 //
 
 #import "MenuTableViewCell.h"
-#import "UIColor+RGB.h"
+#import "CategoriasProvider.h"
 
 @implementation MenuTableViewCell
 
@@ -21,47 +21,11 @@
     // Configure the view for the selected state
 }
 
--(void) setCategoria:(MenuOptionsCategoriasEnum)categoria
+-(void) setCategoria:(BeneficiosCategoriasEnum)categoria
 {
     _categoria = categoria;
     
-    switch (categoria) {
-        case MenuOptionsCategorias_Gastronomia:
-            [self.menuLabel setText:@"Gastronomia"];
-            [self setBackgroundColor:[UIColor colorWithRGB:@"#F39200"]];
-            break;
-            
-        case MenuOptionsCategorias_Entretenimiento:
-            [self.menuLabel setText:@"Entretenimiento"];
-            [self setBackgroundColor:[UIColor colorWithRGB:@"#951B81"]];
-            break;
-            
-        case MenuOptionsCategorias_Turismo:
-            [self.menuLabel setText:@"Turismo"];
-            [self setBackgroundColor:[UIColor colorWithRGB:@"#387738"]];
-            break;
-            
-        case MenuOptionsCategorias_CuidadoPersonal:
-            [self.menuLabel setText:@"Cuidado Personal"];
-            [self setBackgroundColor:[UIColor colorWithRGB:@"#49BED6"]];
-            break;
-            
-        case MenuOptionsCategorias_MasCategorias:
-            [self.menuLabel setText:@"Mas Categorias"];
-            [self setBackgroundColor:[UIColor colorWithRGB:@"#FC2C03"]];
-            break;
-            
-        case MenuOptionsCategorias_Moda:
-            [self.menuLabel setText:@"Moda"];
-            [self setBackgroundColor:[UIColor colorWithRGB:@"#E72B71"]];
-            break;
-
-        case MenuOptionsCategorias_invalid:
-            [self setBackgroundColor:[UIColor clearColor]];
-            break;
-            
-        default:
-            break;
-    }
+    [self.menuLabel setText:[CategoriasProvider descriptionForCategoria:categoria]];
+    [self setBackgroundColor:[CategoriasProvider colorForCategoria:categoria]];
 }
 @end

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BeneficiosCategoriasEnum.h"
+
 
 @interface BeneficiosListCollectionViewController : UICollectionViewController <UIAlertViewDelegate>
 
+@property (nonatomic, assign) BeneficiosCategoriasEnum categoria;
 @end

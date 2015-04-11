@@ -7,19 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-typedef enum
-{
-    MenuOptionsCategorias_invalid = -1,
-    MenuOptionsCategorias_Gastronomia,
-    MenuOptionsCategorias_Entretenimiento,
-    MenuOptionsCategorias_Turismo,
-    MenuOptionsCategorias_CuidadoPersonal,
-    MenuOptionsCategorias_Moda,
-    MenuOptionsCategorias_MasCategorias,
-    MenuOptionsCategorias_count
-}MenuOptionsCategoriasEnum;
+#import "NavigationDelegate.h"
 
 @interface MenuTableViewController : UITableViewController
 
+@property (nonatomic, weak) id<NavigationDelegate> delegate;
 @end
