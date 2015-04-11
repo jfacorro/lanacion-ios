@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "SWRevealViewController.h"
+#import "NavigationDelegate.h"
 
-@interface MenuContainerViewController : SWRevealViewController
-
+@interface MenuContainerViewController : SWRevealViewController <NavigationDelegate>
 
 @end

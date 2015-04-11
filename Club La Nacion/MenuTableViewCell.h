@@ -7,12 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MenuTableViewController.h"
-
+#import "BeneficiosCategoriasEnum.h"
 
 @interface MenuTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) IBOutlet UILabel* menuLabel;
-@property (nonatomic, assign) MenuOptionsCategoriasEnum categoria;
+@property (nonatomic, assign) BeneficiosCategoriasEnum categoria;
 
 @end

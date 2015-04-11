@@ -69,7 +69,7 @@ typedef enum
     
     switch (indexPath.section) {
         case MenuOptionsSections_Categorias:
-            [cell setCategoria:(MenuOptionsCategoriasEnum)indexPath.row];
+            [cell setCategoria:(BeneficiosCategoriasEnum)indexPath.row];
             break;
             
         case MenuOptionsSections_Config:
@@ -88,6 +88,26 @@ typedef enum
     return cell;
 }
 
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.section) {
+        case MenuOptionsSections_Categorias:
+            [self.delegate showBeneficios:(BeneficiosCategoriasEnum)indexPath.row];
+            break;
+            
+        case MenuOptionsSections_Config:
+            [self.delegate showConfiguracion];
+            break;
+            
+        case MenuOptionsSections_Mapa:
+            [self.delegate showMapa];
+            break;
+            
+        default:
+            break;
+    }
+    
+}
 /*
 #pragma mark - Navigation
 
