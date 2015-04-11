@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface BeneficiosMapViewController : UIViewController
+@interface BeneficiosMapViewController : UIViewController <CLLocationManagerDelegate>
 
 @end

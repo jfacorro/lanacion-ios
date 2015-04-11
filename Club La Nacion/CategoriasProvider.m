@@ -45,6 +45,19 @@
     return [UIColor clearColor];
 }
 
++ (BeneficiosCategoriasEnum) categoriaByDescription:(NSString*) description
+{
+    for(BeneficiosCategoriasEnum cat=MenuOptionsCategorias_invalid+1;cat < MenuOptionsCategorias_count; cat++)
+    {
+       if([description isEqualToString:[CategoriasProvider descriptionForCategoria:cat]])
+       {
+           return cat;
+       }
+    }
+    
+    return MenuOptionsCategorias_invalid;
+}
+
 + (NSString*) descriptionForCategoria:(BeneficiosCategoriasEnum) categoria
 {
     
@@ -80,4 +93,40 @@
     return @"";
 }
 
+
++ (UIImage*) pinForCategoria:(BeneficiosCategoriasEnum) categoria
+{
+    
+    switch (categoria) {
+        case MenuOptionsCategorias_Gastronomia:
+            return [UIImage imageNamed:@"Gastronomia"];
+            break;
+            
+        case MenuOptionsCategorias_Entretenimiento:
+            return [UIImage imageNamed:@"Entretenimiento"];
+            break;
+            
+        case MenuOptionsCategorias_Turismo:
+            return [UIImage imageNamed:@"Turismo"];
+            break;
+            
+        case MenuOptionsCategorias_CuidadoPersonal:
+            return [UIImage imageNamed:@"Cuidado Personal"];
+            break;
+            
+        case MenuOptionsCategorias_MasCategorias:
+            return [UIImage imageNamed:@"Mas Categorias"];
+            break;
+            
+        case MenuOptionsCategorias_Moda:
+            return [UIImage imageNamed:@"Moda"];
+            break;
+            
+        default:
+            break;
+    }
+    
+    return nil;
+}
 @end
+

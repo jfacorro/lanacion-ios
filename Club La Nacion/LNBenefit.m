@@ -38,6 +38,22 @@
     }
     return self;
 }
+
+- (CLLocationCoordinate2D) coordinate
+{
+    return self.benefitLocation.coordinate;
+}
+
+- (NSString*) title
+{
+    return self.benefitData.nombre;
+}
+
+- (NSString*) subtitle
+{
+    return [NSString stringWithFormat:@"%@ %@", self.benefitData.tipo, self.benefitData.descripcion];
+}
+
 -(NSArray *)getImagesFromString:(NSString *)initialString
 {
     NSMutableArray * imageNamesArray = [[NSMutableArray alloc]init];

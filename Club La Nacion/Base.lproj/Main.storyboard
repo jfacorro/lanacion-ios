@@ -340,13 +340,23 @@
                                     <constraint firstAttribute="width" constant="200" id="huT-4H-w1A"/>
                                 </constraints>
                             </imageView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Gnr-U0-fIa">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="M81-Mj-iIm" secondAttribute="centerX" id="0I2-dM-tY8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Gnr-U0-fIa" secondAttribute="trailing" constant="-16" id="70s-OT-8UM"/>
+                            <constraint firstItem="Gnr-U0-fIa" firstAttribute="top" secondItem="yGs-eY-9TM" secondAttribute="topMargin" id="F8t-M3-tlX"/>
+                            <constraint firstItem="Gnr-U0-fIa" firstAttribute="leading" secondItem="yGs-eY-9TM" secondAttribute="leadingMargin" constant="-16" id="cBu-k7-y2i"/>
                             <constraint firstAttribute="centerY" secondItem="M81-Mj-iIm" secondAttribute="centerY" id="yuf-3E-eyc"/>
+                            <constraint firstItem="go7-1h-Jbv" firstAttribute="top" secondItem="Gnr-U0-fIa" secondAttribute="bottom" id="zv5-Jg-ZtO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="Gnr-U0-fIa" id="R6w-l6-NiQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6h0-Qf-gNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

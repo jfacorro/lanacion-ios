@@ -12,7 +12,6 @@
 
 @implementation BeneficiosListCollectionViewController
 
-static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -21,14 +20,6 @@ static NSString * const reuseIdentifier = @"Cell";
     self.repository = [[LNBenefitRepository alloc]initWithBackend:self.backend];
     self.repository.serverUrl = @"http://23.23.128.233:8080/api";
     self.repository.basePath = @"categoria/";
-    
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
     
     [self retrieveBenefits];
 }
