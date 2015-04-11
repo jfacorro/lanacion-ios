@@ -26,6 +26,8 @@
 		418AAD861AD85D0800919B4D /* NSString+toDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 418AAD841AD85D0800919B4D /* NSString+toDate.m */; };
 		418AAD921AD877F000919B4D /* LNBenefitRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 418AAD911AD877F000919B4D /* LNBenefitRepository.m */; };
 		418AAD951AD8789800919B4D /* LNClubBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = 418AAD941AD8789800919B4D /* LNClubBackend.m */; };
+		41A837631AD9274C0080010F /* MapBenefitDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A837621AD9274C0080010F /* MapBenefitDetailView.m */; };
+		41A837651AD927720080010F /* MapBenefitDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41A837641AD927720080010F /* MapBenefitDetailView.xib */; };
 		7D0CA5751AD86E6E00F19DFB /* MenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA5741AD86E6E00F19DFB /* MenuContainerViewController.m */; };
 		7D0CA5781AD8720300F19DFB /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA5771AD8720300F19DFB /* MenuTableViewController.m */; };
 		7D0CA57B1AD8722C00F19DFB /* BeneficiosMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA57A1AD8722C00F19DFB /* BeneficiosMapViewController.m */; };
@@ -82,6 +84,9 @@
 		418AAD911AD877F000919B4D /* LNBenefitRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNBenefitRepository.m; sourceTree = "<group>"; };
 		418AAD931AD8789800919B4D /* LNClubBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNClubBackend.h; sourceTree = "<group>"; };
 		418AAD941AD8789800919B4D /* LNClubBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNClubBackend.m; sourceTree = "<group>"; };
+		41A837611AD9274C0080010F /* MapBenefitDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapBenefitDetailView.h; sourceTree = "<group>"; };
+		41A837621AD9274C0080010F /* MapBenefitDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapBenefitDetailView.m; sourceTree = "<group>"; };
+		41A837641AD927720080010F /* MapBenefitDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapBenefitDetailView.xib; sourceTree = "<group>"; };
 		4E326F5FDD290B4D11AAF39B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7D0CA5731AD86E6E00F19DFB /* MenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuContainerViewController.h; sourceTree = "<group>"; };
 		7D0CA5741AD86E6E00F19DFB /* MenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuContainerViewController.m; sourceTree = "<group>"; };
@@ -159,6 +164,9 @@
 				418AAD591AD83D1400919B4D /* Images.xcassets */,
 				418AAD5B1AD83D1400919B4D /* LaunchScreen.xib */,
 				418AAD4C1AD83D1400919B4D /* Supporting Files */,
+				41A837611AD9274C0080010F /* MapBenefitDetailView.h */,
+				41A837621AD9274C0080010F /* MapBenefitDetailView.m */,
+				41A837641AD927720080010F /* MapBenefitDetailView.xib */,
 				7D0CA5731AD86E6E00F19DFB /* MenuContainerViewController.h */,
 				7D0CA5741AD86E6E00F19DFB /* MenuContainerViewController.m */,
 				7D0CA5761AD8720300F19DFB /* MenuTableViewController.h */,
@@ -349,6 +357,7 @@
 			files = (
 				418AAD581AD83D1400919B4D /* Main.storyboard in Resources */,
 				418AAD5D1AD83D1400919B4D /* LaunchScreen.xib in Resources */,
+				41A837651AD927720080010F /* MapBenefitDetailView.xib in Resources */,
 				418AAD5A1AD83D1400919B4D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +413,7 @@
 				7D0CA5751AD86E6E00F19DFB /* MenuContainerViewController.m in Sources */,
 				7D0CA57E1AD8842800F19DFB /* MenuTableViewCell.m in Sources */,
 				41790E471AD8DAA600AAF1D9 /* BenefitDetailsViewController.m in Sources */,
+				41A837631AD9274C0080010F /* MapBenefitDetailView.m in Sources */,
 				7D0CA5871AD8958E00F19DFB /* BeneficioCollectionViewCell.m in Sources */,
 				7D0CA57B1AD8722C00F19DFB /* BeneficiosMapViewController.m in Sources */,
 				418AAD801AD8553E00919B4D /* NSDictionary+NullObject.m in Sources */,

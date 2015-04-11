@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MapBenefitDetailView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.050000000000000017" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapDetailsBackground" translatesAutoresizingMaskIntoConstraints="NO" id="MXt-kn-JGs">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mna-zn-7qc">
+                    <rect key="frame" x="5" y="5" width="60" height="60"/>
+                    <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="eDu-mc-6ip"/>
+                        <constraint firstAttribute="height" constant="60" id="v3l-kt-qFm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                    <color key="textColor" red="0.0" green="0.35686274509999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="30"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="classic" translatesAutoresizingMaskIntoConstraints="NO" id="mfs-Az-V5X">
+                    <rect key="frame" x="73" y="5" width="62" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="62" id="5ju-pX-8wg"/>
+                        <constraint firstAttribute="height" constant="40" id="Xsc-Ki-ANr"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="premium" translatesAutoresizingMaskIntoConstraints="NO" id="8q4-Oo-p9z">
+                    <rect key="frame" x="143" y="5" width="62" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="7xy-cA-tox"/>
+                        <constraint firstAttribute="width" constant="62" id="pZ7-Cr-K5E"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rivdavia 16430" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6T-fb-Vgn">
+                    <rect key="frame" x="28" y="130" width="83" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="12" id="uiq-9o-dGA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cuidados - Uñas pintadas" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="i65-Vt-Nrg">
+                    <rect key="frame" x="8" y="66" width="304" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="27" id="l1G-SD-VnA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" red="0.28627450980000002" green="0.74509803919999995" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La Uñeria" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCP-U2-86i">
+                    <rect key="frame" x="8" y="94" width="304" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="CJ6-WM-W4C"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map pin" translatesAutoresizingMaskIntoConstraints="NO" id="PRi-ka-nsm">
+                    <rect key="frame" x="5" y="124" width="18" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="Bfj-cg-oqS"/>
+                        <constraint firstAttribute="width" constant="18" id="SBc-7U-zTl"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Termina en 2 dias" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7r-S5-qBz">
+                    <rect key="frame" x="215" y="130" width="95" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="12" id="9Zc-rt-TOX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMg-AG-iLA">
+                    <rect key="frame" x="222" y="0.0" width="98" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="98" id="hbw-dm-4J0"/>
+                        <constraint firstAttribute="height" constant="34" id="xwz-zr-k1q"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
+                    <state key="normal" title="CERRAR (X)">
+                        <color key="titleColor" red="0.0" green="0.35686274509803922" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="hideView:" destination="iN0-l3-epB" eventType="touchUpInside" id="S2p-kD-4Ht"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="PRi-ka-nsm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="0mf-2u-Gxx"/>
+                <constraint firstItem="MXt-kn-JGs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="1Jp-7S-HrF"/>
+                <constraint firstItem="i65-Vt-Nrg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="4vq-sP-FXh"/>
+                <constraint firstItem="Mna-zn-7qc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="7YF-2L-UZa"/>
+                <constraint firstAttribute="trailing" secondItem="i65-Vt-Nrg" secondAttribute="trailing" constant="8" id="9dg-Or-ivm"/>
+                <constraint firstItem="i65-Vt-Nrg" firstAttribute="top" secondItem="Mna-zn-7qc" secondAttribute="bottom" constant="1" id="9yr-CK-2lc"/>
+                <constraint firstAttribute="trailing" secondItem="w7r-S5-qBz" secondAttribute="trailing" constant="10" id="AS4-wI-7Vt"/>
+                <constraint firstItem="m6T-fb-Vgn" firstAttribute="leading" secondItem="PRi-ka-nsm" secondAttribute="trailing" constant="5" id="FMV-gW-tKb"/>
+                <constraint firstItem="FCP-U2-86i" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="FoT-0M-960"/>
+                <constraint firstAttribute="bottom" secondItem="m6T-fb-Vgn" secondAttribute="bottom" constant="8" id="Gan-V3-he8"/>
+                <constraint firstItem="FCP-U2-86i" firstAttribute="top" secondItem="i65-Vt-Nrg" secondAttribute="bottom" constant="1" id="M9Y-tZ-tqx"/>
+                <constraint firstItem="bMg-AG-iLA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Mu4-SN-Jrp"/>
+                <constraint firstAttribute="trailing" secondItem="bMg-AG-iLA" secondAttribute="trailing" id="NR0-Eb-nJt"/>
+                <constraint firstItem="8q4-Oo-p9z" firstAttribute="leading" secondItem="mfs-Az-V5X" secondAttribute="trailing" constant="8" id="QaL-AR-T8c"/>
+                <constraint firstAttribute="bottom" secondItem="MXt-kn-JGs" secondAttribute="bottom" id="YVz-lF-2AU"/>
+                <constraint firstAttribute="trailing" secondItem="FCP-U2-86i" secondAttribute="trailing" constant="8" id="buk-SD-jtX"/>
+                <constraint firstAttribute="trailing" secondItem="MXt-kn-JGs" secondAttribute="trailing" id="caw-1C-MJT"/>
+                <constraint firstAttribute="bottom" secondItem="PRi-ka-nsm" secondAttribute="bottom" constant="2" id="dRf-Wc-OzS"/>
+                <constraint firstItem="8q4-Oo-p9z" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="e4X-hd-nzi"/>
+                <constraint firstItem="mfs-Az-V5X" firstAttribute="leading" secondItem="Mna-zn-7qc" secondAttribute="trailing" constant="8" id="hJc-e6-mw1"/>
+                <constraint firstItem="mfs-Az-V5X" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="jXb-pB-65Z"/>
+                <constraint firstItem="MXt-kn-JGs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nP5-XX-9hn"/>
+                <constraint firstItem="Mna-zn-7qc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="sK7-8b-ze0"/>
+                <constraint firstAttribute="bottom" secondItem="w7r-S5-qBz" secondAttribute="bottom" constant="8" id="uXp-UW-ekf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="benefitBusinesNameLabel" destination="FCP-U2-86i" id="YJM-rU-X7s"/>
+                <outlet property="benefitBusinessAddressLabel" destination="m6T-fb-Vgn" id="f9M-HS-gCq"/>
+                <outlet property="benefitCategoryAndNameLabel" destination="i65-Vt-Nrg" id="lyu-Gt-IUo"/>
+                <outlet property="benefitClassicCardImageView" destination="mfs-Az-V5X" id="246-lv-KsX"/>
+                <outlet property="benefitDisscountLabel" destination="Mna-zn-7qc" id="Xea-M9-AEp"/>
+                <outlet property="benefitExpirationDateLabel" destination="w7r-S5-qBz" id="ruE-ez-OHv"/>
+                <outlet property="benefitImageView" destination="MXt-kn-JGs" id="d3o-rQ-JPU"/>
+                <outlet property="benefitMapPinImageView" destination="PRi-ka-nsm" id="GjP-Da-GIj"/>
+                <outlet property="benefitPremiumCardImageView" destination="8q4-Oo-p9z" id="H77-pl-yeg"/>
+            </connections>
+            <point key="canvasLocation" x="71" y="88"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="classic" width="228" height="146"/>
+        <image name="map pin" width="70" height="112"/>
+        <image name="mapDetailsBackground" width="876" height="186"/>
+        <image name="premium" width="228" height="146"/>
+    </resources>
+</document>
