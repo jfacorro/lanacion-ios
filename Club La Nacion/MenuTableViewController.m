@@ -75,12 +75,12 @@ typedef enum
         case MenuOptionsSections_Config:
             [cell setCategoria:MenuOptionsCategorias_invalid];
             [cell.menuLabel setText:@"Configuracion"];
-            cell.menuLabel.textColor = [UIColor colorWithRed:130.0/255.0 green:130.0/255.0 blue:130.0/255.0 alpha:1.0];
+            cell.menuLabel.textColor = [UIColor colorWithRed:60.0/255.0 green:71.0/255.0 blue:77.0/255.0 alpha:1.0];
             break;
             
         case MenuOptionsSections_Mapa:
             [cell setCategoria:MenuOptionsCategorias_invalid];
-            cell.menuImageView.image = [UIImage imageNamed:@"Mas Categorias"];
+            cell.menuImageView.image = [UIImage imageNamed:@"map pin"];
             cell.menuLabel.textColor = [UIColor colorWithRed:255.0/255.0 green:0.0/255.0 blue:0.0/255.0 alpha:1.0];
             [cell.menuLabel setText:@"Cerca tuyo"];
             break;

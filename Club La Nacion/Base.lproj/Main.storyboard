@@ -175,6 +175,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8pY-eZ-zqc">
+                                <rect key="frame" x="0.0" y="64" width="320" height="194"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="15290" translatesAutoresizingMaskIntoConstraints="NO" id="Q2A-xW-Qeb">
                                 <rect key="frame" x="6" y="101" width="240" height="128"/>
                                 <constraints>
@@ -257,7 +261,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.7666823308270676" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Vmc-u5-HxU" firstAttribute="leading" secondItem="Q2A-xW-Qeb" secondAttribute="trailing" constant="4" id="2CF-Kt-MOs"/>
                             <constraint firstItem="BbI-Bp-aoa" firstAttribute="leading" secondItem="Jju-aV-dGB" secondAttribute="leadingMargin" constant="-6" id="9K0-rQ-Grr"/>
@@ -405,7 +409,7 @@
         <image name="15290" width="275" height="150"/>
         <image name="Logo Club LA NACION" width="353" height="205"/>
         <image name="classic" width="228" height="146"/>
-        <image name="map pin" width="70" height="112"/>
+        <image name="map pin" width="25" height="31"/>
         <image name="premium" width="228" height="146"/>
     </resources>
     <inferredMetricsTieBreakers>
