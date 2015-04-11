@@ -10,17 +10,15 @@
 #import "CategoriasProvider.h"
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
+#import "BeneficiosManager.h"
 #import "LNClubBackend.h"
 #import "LNBenefitRepository.h"
 #import "LNBenefit.h"
 
-@interface BeneficiosMapViewController () <MKMapViewDelegate>
+@interface BeneficiosMapViewController () <MKMapViewDelegate,BeneficiosManagerDelegate>
 
-@property (nonatomic,strong) LNClubBackend *backend;
-@property (nonatomic,strong) LNBenefitRepository *repository;
-@property (nonatomic,strong) NSArray *benefitsArray;
 @property (nonatomic, strong) CLLocationManager* locationManager;
-
+@property (nonatomic, strong) BeneficiosManager* beneficiosManager;
 
 @property (nonatomic, strong) IBOutlet MKMapView* mapView;
 @end
@@ -40,10 +38,8 @@
     [self.locationManager startUpdatingLocation];
     [self.locationManager startMonitoringSignificantLocationChanges];
     
-    self.backend = [[LNClubBackend alloc]init];
-    self.repository = [[LNBenefitRepository alloc]initWithBackend:self.backend];
-//    self.repository.serverUrl = @"http://lanacion.herokuapp.com/api";
-    self.repository.serverUrl = @"http://23.23.128.233:8080/api";
+    self.beneficiosManager = [[BeneficiosManager alloc] init];
+    self.beneficiosManager.delegate = self;
     
     [self.mapView setDelegate:self];
     
@@ -57,45 +53,30 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)loadBeneficiosByLocation:(CLLocationCoordinate2D) coordinate
+- (void) BeneficiosManager:(BeneficiosManager *)manager updatedBeneficios:(NSArray *)beneficios
 {
-    self.repository.basePath = [NSString stringWithFormat:@"geo/%f/%f/1000",coordinate.latitude,coordinate.longitude];
-    
-    [self.repository findAllDocumentsWithSuccess:^(NSArray *documents) {
-        self.benefitsArray = [NSArray arrayWithArray:documents];
-        [self updateMapWithBeneficios];
-    } failure:^(IJError *error) {
-        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Ocurrio un error. Intente de nuevo" delegate:self cancelButtonTitle:@"Aceptar" otherButtonTitles:nil];
-        [alert show];
-        NSLog(@"failure");
-    }];
-
-}
-
-- (void) updateMapWithBeneficios
-{
-    [self.mapView addAnnotations:self.benefitsArray];
+    [self.mapView addAnnotations:beneficios];
 }
 
 - (void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     CLLocation* lastLocation = [locations lastObject];
-    [self loadBeneficiosByLocation:lastLocation.coordinate];
-    
+    [self.beneficiosManager loadBeneficiosByLocation:lastLocation.coordinate];
+
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(lastLocation.coordinate, 500, 500);
     MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:viewRegion];
     [self.mapView setRegion:adjustedRegion animated:YES];
+
 }
 
 - (void)mapViewDidFinishLoadingMap:(MKMapView *)mapView
 {
-    [self loadBeneficiosByLocation:self.mapView.centerCoordinate];
-
+    [self.beneficiosManager loadBeneficiosByLocation:self.mapView.centerCoordinate];
 }
 
 - (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
 {
-    [self loadBeneficiosByLocation:self.mapView.centerCoordinate];
+    [self.beneficiosManager loadBeneficiosByLocation:self.mapView.centerCoordinate];
 }
 
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation

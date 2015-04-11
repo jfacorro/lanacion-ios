@@ -34,6 +34,13 @@
 		7D0CA5871AD8958E00F19DFB /* BeneficioCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA5861AD8958E00F19DFB /* BeneficioCollectionViewCell.m */; };
 		7D0CA58C1AD8A8F200F19DFB /* CategoriasProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA58B1AD8A8F200F19DFB /* CategoriasProvider.m */; };
 		7D0CA58E1AD8C56000F19DFB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0CA58D1AD8C56000F19DFB /* MapKit.framework */; };
+		7D0CA5951AD9207F00F19DFB /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0CA5941AD9207F00F19DFB /* NotificationCenter.framework */; };
+		7D0CA59B1AD9207F00F19DFB /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA59A1AD9207F00F19DFB /* TodayViewController.m */; };
+		7D0CA59D1AD9207F00F19DFB /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D0CA59C1AD9207F00F19DFB /* MainInterface.storyboard */; };
+		7D0CA5A01AD9207F00F19DFB /* Club La Nacion widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7D0CA5931AD9207F00F19DFB /* Club La Nacion widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7D0CA5A51AD9273900F19DFB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418AAD761AD83D9D00919B4D /* CoreLocation.framework */; };
+		7D0CA5AA1AD927E100F19DFB /* TodayCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA5A91AD927E100F19DFB /* TodayCollectionViewCell.m */; };
+		7D0CA5AD1AD92B3200F19DFB /* BeneficiosManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA5AC1AD92B3200F19DFB /* BeneficiosManager.m */; };
 		B128F1E8E2CB0DB2B19B560C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE74D5252A9598D0927079F0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +52,28 @@
 			remoteGlobalIDString = 418AAD481AD83D1400919B4D;
 			remoteInfo = "Club La Nacion";
 		};
+		7D0CA59E1AD9207F00F19DFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 418AAD411AD83D1400919B4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D0CA5921AD9207F00F19DFB;
+			remoteInfo = "Club La Nacion widget";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7D0CA5A41AD9207F00F19DFB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7D0CA5A01AD9207F00F19DFB /* Club La Nacion widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		41790E421AD89CF100AAF1D9 /* BeneficiosListCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeneficiosListCollectionViewController.h; sourceTree = "<group>"; };
@@ -100,6 +128,16 @@
 		7D0CA58A1AD8A8F200F19DFB /* CategoriasProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriasProvider.h; sourceTree = "<group>"; };
 		7D0CA58B1AD8A8F200F19DFB /* CategoriasProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriasProvider.m; sourceTree = "<group>"; };
 		7D0CA58D1AD8C56000F19DFB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7D0CA5931AD9207F00F19DFB /* Club La Nacion widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Club La Nacion widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D0CA5941AD9207F00F19DFB /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		7D0CA5981AD9207F00F19DFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D0CA5991AD9207F00F19DFB /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		7D0CA59A1AD9207F00F19DFB /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		7D0CA59C1AD9207F00F19DFB /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		7D0CA5A81AD927E100F19DFB /* TodayCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayCollectionViewCell.h; sourceTree = "<group>"; };
+		7D0CA5A91AD927E100F19DFB /* TodayCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayCollectionViewCell.m; sourceTree = "<group>"; };
+		7D0CA5AB1AD92B3200F19DFB /* BeneficiosManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeneficiosManager.h; sourceTree = "<group>"; };
+		7D0CA5AC1AD92B3200F19DFB /* BeneficiosManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeneficiosManager.m; sourceTree = "<group>"; };
 		93367FE6327B06579DF5677A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CE74D5252A9598D0927079F0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -122,6 +160,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7D0CA5901AD9207F00F19DFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D0CA5A51AD9273900F19DFB /* CoreLocation.framework in Frameworks */,
+				7D0CA5951AD9207F00F19DFB /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -130,6 +177,7 @@
 			children = (
 				418AAD4B1AD83D1400919B4D /* Club La Nacion */,
 				418AAD651AD83D1500919B4D /* Club La NacionTests */,
+				7D0CA5961AD9207F00F19DFB /* Club La Nacion widget */,
 				418AAD4A1AD83D1400919B4D /* Products */,
 				7017C64887BA67D56C9EDAFA /* Pods */,
 				F132C1EA1031FDB28BD36967 /* Frameworks */,
@@ -141,6 +189,7 @@
 			children = (
 				418AAD491AD83D1400919B4D /* Club La Nacion.app */,
 				418AAD621AD83D1500919B4D /* Club La NacionTests.xctest */,
+				7D0CA5931AD9207F00F19DFB /* Club La Nacion widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,6 +226,8 @@
 				7D0CA5891AD8A28400F19DFB /* BeneficiosCategoriasEnum.h */,
 				7D0CA58A1AD8A8F200F19DFB /* CategoriasProvider.h */,
 				7D0CA58B1AD8A8F200F19DFB /* CategoriasProvider.m */,
+				7D0CA5AB1AD92B3200F19DFB /* BeneficiosManager.h */,
+				7D0CA5AC1AD92B3200F19DFB /* BeneficiosManager.m */,
 			);
 			path = "Club La Nacion";
 			sourceTree = "<group>";
@@ -255,12 +306,34 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7D0CA5961AD9207F00F19DFB /* Club La Nacion widget */ = {
+			isa = PBXGroup;
+			children = (
+				7D0CA5991AD9207F00F19DFB /* TodayViewController.h */,
+				7D0CA59A1AD9207F00F19DFB /* TodayViewController.m */,
+				7D0CA5A81AD927E100F19DFB /* TodayCollectionViewCell.h */,
+				7D0CA5A91AD927E100F19DFB /* TodayCollectionViewCell.m */,
+				7D0CA59C1AD9207F00F19DFB /* MainInterface.storyboard */,
+				7D0CA5971AD9207F00F19DFB /* Supporting Files */,
+			);
+			path = "Club La Nacion widget";
+			sourceTree = "<group>";
+		};
+		7D0CA5971AD9207F00F19DFB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7D0CA5981AD9207F00F19DFB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		F132C1EA1031FDB28BD36967 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				418AAD761AD83D9D00919B4D /* CoreLocation.framework */,
 				7D0CA58D1AD8C56000F19DFB /* MapKit.framework */,
 				CE74D5252A9598D0927079F0 /* libPods.a */,
+				7D0CA5941AD9207F00F19DFB /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -277,10 +350,12 @@
 				418AAD461AD83D1400919B4D /* Frameworks */,
 				418AAD471AD83D1400919B4D /* Resources */,
 				2BED5279634887209CF6B384 /* Copy Pods Resources */,
+				7D0CA5A41AD9207F00F19DFB /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7D0CA59F1AD9207F00F19DFB /* PBXTargetDependency */,
 			);
 			name = "Club La Nacion";
 			productName = "Club La Nacion";
@@ -305,6 +380,23 @@
 			productReference = 418AAD621AD83D1500919B4D /* Club La NacionTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		7D0CA5921AD9207F00F19DFB /* Club La Nacion widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D0CA5A31AD9207F00F19DFB /* Build configuration list for PBXNativeTarget "Club La Nacion widget" */;
+			buildPhases = (
+				7D0CA58F1AD9207F00F19DFB /* Sources */,
+				7D0CA5901AD9207F00F19DFB /* Frameworks */,
+				7D0CA5911AD9207F00F19DFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Club La Nacion widget";
+			productName = "Club La Nacion widget";
+			productReference = 7D0CA5931AD9207F00F19DFB /* Club La Nacion widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -320,6 +412,9 @@
 					418AAD611AD83D1500919B4D = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 418AAD481AD83D1400919B4D;
+					};
+					7D0CA5921AD9207F00F19DFB = {
+						CreatedOnToolsVersion = 6.2;
 					};
 				};
 			};
@@ -338,6 +433,7 @@
 			targets = (
 				418AAD481AD83D1400919B4D /* Club La Nacion */,
 				418AAD611AD83D1500919B4D /* Club La NacionTests */,
+				7D0CA5921AD9207F00F19DFB /* Club La Nacion widget */,
 			);
 		};
 /* End PBXProject section */
@@ -357,6 +453,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D0CA5911AD9207F00F19DFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D0CA59D1AD9207F00F19DFB /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +512,7 @@
 				7D0CA57B1AD8722C00F19DFB /* BeneficiosMapViewController.m in Sources */,
 				418AAD801AD8553E00919B4D /* NSDictionary+NullObject.m in Sources */,
 				418AAD861AD85D0800919B4D /* NSString+toDate.m in Sources */,
+				7D0CA5AD1AD92B3200F19DFB /* BeneficiosManager.m in Sources */,
 				418AAD921AD877F000919B4D /* LNBenefitRepository.m in Sources */,
 				7D0CA58C1AD8A8F200F19DFB /* CategoriasProvider.m in Sources */,
 				418AAD551AD83D1400919B4D /* ViewController.m in Sources */,
@@ -432,6 +537,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7D0CA58F1AD9207F00F19DFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D0CA5AA1AD927E100F19DFB /* TodayCollectionViewCell.m in Sources */,
+				7D0CA59B1AD9207F00F19DFB /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -439,6 +553,11 @@
 			isa = PBXTargetDependency;
 			target = 418AAD481AD83D1400919B4D /* Club La Nacion */;
 			targetProxy = 418AAD631AD83D1500919B4D /* PBXContainerItemProxy */;
+		};
+		7D0CA59F1AD9207F00F19DFB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D0CA5921AD9207F00F19DFB /* Club La Nacion widget */;
+			targetProxy = 7D0CA59E1AD9207F00F19DFB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -594,6 +713,30 @@
 			};
 			name = Release;
 		};
+		7D0CA5A11AD9207F00F19DFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Club La Nacion widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7D0CA5A21AD9207F00F19DFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Club La Nacion widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -623,6 +766,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		7D0CA5A31AD9207F00F19DFB /* Build configuration list for PBXNativeTarget "Club La Nacion widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D0CA5A11AD9207F00F19DFB /* Debug */,
+				7D0CA5A21AD9207F00F19DFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
