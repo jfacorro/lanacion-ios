@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "LNBenefit.h"
 @interface BenefitDetailsViewController : UIViewController
-
+@property (nonatomic,strong) LNBenefit * benefit;
 @end
