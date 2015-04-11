@@ -15,7 +15,6 @@
     UIColor * color = [self colorForCategoria:categoria];
     
     return [color colorWithAlphaComponent:alpha];
-//    color.
 }
 + (UIColor*) colorForCategoria:(BeneficiosCategoriasEnum)categoria
 {
