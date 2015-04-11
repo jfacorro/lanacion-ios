@@ -30,7 +30,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    self.title = @"Cerca tuyo";
+    
     self.locationManager = [[CLLocationManager alloc] init];
+    [self.locationManager requestWhenInUseAuthorization];
     [self.locationManager setDelegate:self];
     [self.locationManager setDistanceFilter:500.f];
     [self.locationManager startUpdatingLocation];
@@ -38,9 +42,13 @@
     
     self.backend = [[LNClubBackend alloc]init];
     self.repository = [[LNBenefitRepository alloc]initWithBackend:self.backend];
-    self.repository.serverUrl = @"http://lanacion.herokuapp.com/api";
+//    self.repository.serverUrl = @"http://lanacion.herokuapp.com/api";
+    self.repository.serverUrl = @"http://23.23.128.233:8080/api";
     
     [self.mapView setDelegate:self];
+    
+    self.mapView.showsUserLocation = YES;
+
     // Do any additional setup after loading the view.
 }
 
@@ -51,7 +59,7 @@
 
 - (void)loadBeneficiosByLocation:(CLLocationCoordinate2D) coordinate
 {
-    self.repository.basePath = [NSString stringWithFormat:@"geo/%f/%f/200",coordinate.latitude,coordinate.longitude];
+    self.repository.basePath = [NSString stringWithFormat:@"geo/%f/%f/1000",coordinate.latitude,coordinate.longitude];
     
     [self.repository findAllDocumentsWithSuccess:^(NSArray *documents) {
         self.benefitsArray = [NSArray arrayWithArray:documents];
@@ -66,7 +74,6 @@
 
 - (void) updateMapWithBeneficios
 {
-    [self.mapView removeAnnotations:self.mapView.annotations];
     [self.mapView addAnnotations:self.benefitsArray];
 }
 
@@ -74,6 +81,10 @@
 {
     CLLocation* lastLocation = [locations lastObject];
     [self loadBeneficiosByLocation:lastLocation.coordinate];
+    
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(lastLocation.coordinate, 500, 500);
+    MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:viewRegion];
+    [self.mapView setRegion:adjustedRegion animated:YES];
 }
 
 - (void)mapViewDidFinishLoadingMap:(MKMapView *)mapView
@@ -85,7 +96,6 @@
 - (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
 {
     [self loadBeneficiosByLocation:self.mapView.centerCoordinate];
-
 }
 
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation

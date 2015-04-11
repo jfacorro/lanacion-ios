@@ -175,7 +175,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="15290" translatesAutoresizingMaskIntoConstraints="NO" id="Q2A-xW-Qeb">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="15290" translatesAutoresizingMaskIntoConstraints="NO" id="Q2A-xW-Qeb">
                                 <rect key="frame" x="6" y="101" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="KZ2-iK-HXs"/>
@@ -240,28 +240,13 @@
                                     <constraint firstAttribute="width" constant="24" id="AB4-Vy-viJ"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbI-Bp-aoa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Termina en 2 dias" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbI-Bp-aoa">
                                 <rect key="frame" x="10" y="238" width="96" height="12"/>
-                                <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="12" id="4J7-wS-wWJ"/>
                                 </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Termina en ">
-                                        <attributes>
-                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="2 dias">
-                                        <attributes>
-                                            <color key="NSColor" red="0.89253472222222219" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="premium" translatesAutoresizingMaskIntoConstraints="NO" id="GmF-Jw-MrY">
@@ -323,6 +308,7 @@
                         <outlet property="benefitDisscountLabel" destination="tRx-fF-ICO" id="UNv-N8-1Fl"/>
                         <outlet property="benefitExpirationDateLabel" destination="BbI-Bp-aoa" id="HLI-Jq-tKx"/>
                         <outlet property="benefitImageView" destination="Q2A-xW-Qeb" id="1Lu-Md-cgP"/>
+                        <outlet property="benefitMapMarker" destination="6jV-pb-5Fg" id="ZqC-Um-Oc5"/>
                         <outlet property="benefitPremiumCardImageView" destination="GmF-Jw-MrY" id="Ccr-9K-2HM"/>
                         <outlet property="locationMapViewController" destination="KtL-HC-p14" id="tmv-89-I3W"/>
                     </connections>

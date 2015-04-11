@@ -23,6 +23,9 @@
     self.repository.basePath = @"categoria/";
     
     [self retrieveBenefits];
+    
+    [self.navigationController.navigationBar setBarTintColor:[CategoriasProvider colorForCategoria:self.categoria]];
+    [self.navigationItem setTitle:[CategoriasProvider descriptionForCategoria:self.categoria]];
 }
 
 - (void)retrieveBenefits

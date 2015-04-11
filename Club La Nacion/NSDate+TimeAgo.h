@@ -11,4 +11,6 @@
 
 - (NSString *)timeToExpireText;
 - (NSString *)timeToExpireTextFromDate:(NSDate *)date;
+- (NSTimeInterval) secondsToExpire;
+
 @end
