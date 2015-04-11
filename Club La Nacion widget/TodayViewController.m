@@ -34,8 +34,9 @@
         [self.locationManager requestAlwaysAuthorization];
     }
     
-    [self.locationManager startMonitoringSignificantLocationChanges];
     
+    [self.locationManager startMonitoringSignificantLocationChanges];
+    [self.locationManager startUpdatingLocation];
     // Do any additional setup after loading the view from its nib.
 }
 
