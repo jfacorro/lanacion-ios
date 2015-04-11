@@ -22,6 +22,7 @@
 @property (nonatomic,strong) NSArray *benefitsArray;
 @property (nonatomic, weak) id<BeneficiosManagerDelegate> delegate;
 
+- (void)loadNearBeneficiosByLocation:(CLLocationCoordinate2D) coordinate;
 - (void)loadBeneficiosByLocation:(CLLocationCoordinate2D) coordinate;
 - (void)loadBeneficiosByCategoria:(BeneficiosCategoriasEnum) categoria;
 

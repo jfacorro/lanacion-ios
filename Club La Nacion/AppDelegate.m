@@ -7,9 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "BeneficiosManager.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface AppDelegate ()
+@interface AppDelegate () <CLLocationManagerDelegate, BeneficiosManagerDelegate>
 
+@property (nonatomic, strong) BeneficiosManager *beneficiosManager;
+@property (nonatomic, strong) CLLocationManager *locationManager;
 @end
 
 @implementation AppDelegate
@@ -18,7 +22,28 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [self registerAppForPushNotifications:application];
+    self.locationManager = [[CLLocationManager alloc] init];
+    if([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)])
+        [self.locationManager requestAlwaysAuthorization];
+    
+    [self.locationManager setDelegate:self];
+    [self.locationManager setDistanceFilter:50.f];
+    [self.locationManager startUpdatingLocation];
+    [self.locationManager startMonitoringSignificantLocationChanges];
+    [self.locationManager setPausesLocationUpdatesAutomatically:NO];
+    
+    self.beneficiosManager = [[BeneficiosManager alloc] init];
+    self.beneficiosManager.delegate = self;
+    
+//    [self registerAppForPushNotifications:application];
+    
+    if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]) {
+        [[UIApplication sharedApplication] registerUserNotificationSettings:
+         [UIUserNotificationSettings settingsForTypes:
+          UIUserNotificationTypeAlert|UIUserNotificationTypeSound|UIUserNotificationTypeBadge
+                                                     categories:nil]];
+    }
+    
     return YES;
 }
 
@@ -82,5 +107,35 @@
 //        handler.pushNotificationInfo = userInfo;
 //        [handler navigateAccordingToPushNotification];
 //    }
+}
+
+- (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    if (application.applicationState == UIApplicationStateActive)
+    {
+        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:notification.alertAction message:notification.alertBody delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil];
+        [alert show];
+    }
+}
+
+- (void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    CLLocation* lastLocation = [locations lastObject];
+    [self.beneficiosManager loadNearBeneficiosByLocation:lastLocation.coordinate];
+}
+
+- (void) BeneficiosManager:(BeneficiosManager *)manager updatedBeneficios:(NSArray *)beneficios
+{
+    if(beneficios.count > 0)
+    {
+        UILocalNotification* localNotification = [[UILocalNotification alloc] init];
+        localNotification.fireDate = [NSDate date];
+        localNotification.timeZone = [NSTimeZone defaultTimeZone];
+
+        localNotification.alertBody = [NSString stringWithFormat:@"Hay %ld beneficios cerca tuyo",(unsigned long)beneficios.count];
+        localNotification.alertAction = @"Hay beneficios para aprovechar";
+        
+        [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    }
 }
 @end

@@ -48,6 +48,7 @@
     self.benefitCategoriesLabel.textColor = [CategoriasProvider colorForCategoria:[CategoriasProvider categoriaByDescription:self.benefit.benefitData.categoria] withAlpha:0.75];
     
     self.benefitDisscountLabel.text = self.benefit.benefitData.tipo;
+    self.benefitImageView.image = nil;
     [self.benefitImageView setImageWithURL:[NSURL URLWithString:[self.benefit.benefitImages firstObject]]];
     if([self.benefit.benefitToDate secondsToExpire] > 0)
     {

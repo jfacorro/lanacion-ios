@@ -56,6 +56,20 @@
     }];
 }
 
+- (void)loadNearBeneficiosByLocation:(CLLocationCoordinate2D) coordinate
+{
+    self.repository.basePath = [NSString stringWithFormat:@"geo/%f/%f/100",coordinate.latitude,coordinate.longitude];
+    
+    [self.repository findAllDocumentsWithSuccess:^(NSArray *documents) {
+        self.benefitsArray = [NSArray arrayWithArray:documents];
+        [self.delegate BeneficiosManager:self updatedBeneficios:self.benefitsArray];
+    } failure:^(IJError *error) {
+        //UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Ocurrio un error. Intente de nuevo" delegate:self cancelButtonTitle:@"Aceptar" otherButtonTitles:nil];
+        //[alert show];
+        NSLog(@"failure: %@", error.description);
+    }];
+}
+
 - (void)loadBeneficiosByCategoria:(BeneficiosCategoriasEnum) categoria
 {
     self.repository.basePath = [NSString stringWithFormat:@"categoria/%@", [[CategoriasProvider descriptionForCategoria:categoria] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];

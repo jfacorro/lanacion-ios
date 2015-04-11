@@ -7,6 +7,7 @@
 //
 
 #import "LNBenefitData.h"
+#import "NSDictionary+NullObject.h"
 
 @implementation LNBenefitData
 
@@ -20,11 +21,11 @@
         NSLog(@"%@",keyString);
         if ([keyString isEqualToString:@"id"])
         {
-            benefitData.benefitDataId = [benefitDataDictionary[keyString] integerValue];
+            benefitData.benefitDataId = [[benefitDataDictionary safeObjectForKey:keyString] integerValue];
             continue;
         }else
         {
-            [benefitData setValue:benefitDataDictionary[keyString] forKey:keyString];
+            [benefitData setValue:[benefitDataDictionary safeObjectForKey:keyString] forKey:keyString];
         }
     }
     
