@@ -33,6 +33,7 @@
 		7D0CA5811AD8855400F19DFB /* UIColor+RGB.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA5801AD8855400F19DFB /* UIColor+RGB.m */; };
 		7D0CA5871AD8958E00F19DFB /* BeneficioCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA5861AD8958E00F19DFB /* BeneficioCollectionViewCell.m */; };
 		7D0CA58C1AD8A8F200F19DFB /* CategoriasProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0CA58B1AD8A8F200F19DFB /* CategoriasProvider.m */; };
+		7D0CA58E1AD8C56000F19DFB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0CA58D1AD8C56000F19DFB /* MapKit.framework */; };
 		B128F1E8E2CB0DB2B19B560C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE74D5252A9598D0927079F0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		7D0CA5891AD8A28400F19DFB /* BeneficiosCategoriasEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeneficiosCategoriasEnum.h; sourceTree = "<group>"; };
 		7D0CA58A1AD8A8F200F19DFB /* CategoriasProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriasProvider.h; sourceTree = "<group>"; };
 		7D0CA58B1AD8A8F200F19DFB /* CategoriasProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriasProvider.m; sourceTree = "<group>"; };
+		7D0CA58D1AD8C56000F19DFB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		93367FE6327B06579DF5677A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CE74D5252A9598D0927079F0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D0CA58E1AD8C56000F19DFB /* MapKit.framework in Frameworks */,
 				418AAD771AD83D9D00919B4D /* CoreLocation.framework in Frameworks */,
 				B128F1E8E2CB0DB2B19B560C /* libPods.a in Frameworks */,
 			);
@@ -256,6 +259,7 @@
 		F132C1EA1031FDB28BD36967 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D0CA58D1AD8C56000F19DFB /* MapKit.framework */,
 				CE74D5252A9598D0927079F0 /* libPods.a */,
 			);
 			name = Frameworks;
