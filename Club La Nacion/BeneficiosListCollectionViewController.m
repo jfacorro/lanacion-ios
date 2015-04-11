@@ -4,11 +4,11 @@
 #import "BeneficioCollectionViewCell.h"
 #import "CategoriasProvider.h"
 #import "BenefitDetailsViewController.h"
+#import "BeneficiosManager.h"
 
-@interface BeneficiosListCollectionViewController ()
-@property (nonatomic,strong) LNClubBackend *backend;
-@property (nonatomic,strong) LNBenefitRepository *repository;
-@property (nonatomic,strong) NSArray *benefitsArray;
+@interface BeneficiosListCollectionViewController () <BeneficiosManagerDelegate>
+
+@property (nonatomic, strong) BeneficiosManager* beneficiosManager;
 @end
 
 @implementation BeneficiosListCollectionViewController
@@ -17,30 +17,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.backend = [[LNClubBackend alloc]init];
-    self.repository = [[LNBenefitRepository alloc]initWithBackend:self.backend];
-    self.repository.serverUrl = @"http://23.23.128.233:8080/api";
-    self.repository.basePath = @"categoria/";
+    self.beneficiosManager = [[BeneficiosManager alloc] init];
+    self.beneficiosManager.delegate = self;
     
-    [self retrieveBenefits];
+    [self.beneficiosManager loadBeneficiosByCategoria:self.categoria];
     
     [self.navigationController.navigationBar setBarTintColor:[CategoriasProvider colorForCategoria:self.categoria]];
     [self.navigationItem setTitle:[CategoriasProvider descriptionForCategoria:self.categoria]];
 }
 
-- (void)retrieveBenefits
-{
-    NSString *parametersPath = [[CategoriasProvider descriptionForCategoria:self.categoria] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    self.repository.basePath = [self.repository.basePath stringByAppendingString:parametersPath];
-    [self.repository findAllDocumentsWithSuccess:^(NSArray *documents) {
-        self.benefitsArray = [NSArray arrayWithArray:documents];
-        [self.collectionView reloadData];
-    } failure:^(IJError *error) {
-        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Ocurrio un error. Intente de nuevo" delegate:self cancelButtonTitle:@"Aceptar" otherButtonTitles:nil];
-        [alert show];
-        NSLog(@"failure");
-    }];
-}
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     [self.navigationController popViewControllerAnimated:YES];
@@ -71,13 +56,13 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.benefitsArray.count;
+    return self.beneficiosManager.benefitsArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     BeneficioCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"BeneficioCell" forIndexPath:indexPath];
     
-    [cell setBeneficio:[self.benefitsArray objectAtIndex:indexPath.row]];
+    [cell setBeneficio:[self.beneficiosManager.benefitsArray objectAtIndex:indexPath.row]];
     // Configure the cell
     
     return cell;
@@ -89,11 +74,17 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     BenefitDetailsViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"BenefitDetailsViewController"];
     
-    [controller setBenefit:[self.benefitsArray objectAtIndex:indexPath.row]];
+    [controller setBenefit:[self.beneficiosManager.benefitsArray objectAtIndex:indexPath.row]];
     
     [self.navigationController pushViewController:controller animated:YES];
 
 }
+
+- (void) BeneficiosManager:(BeneficiosManager *)manager updatedBeneficios:(NSArray *)beneficios
+{
+    [self.collectionView reloadData];
+}
+
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
