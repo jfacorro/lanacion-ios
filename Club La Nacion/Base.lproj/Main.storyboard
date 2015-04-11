@@ -175,7 +175,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="15290" translatesAutoresizingMaskIntoConstraints="NO" id="Q2A-xW-Qeb">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="15290" translatesAutoresizingMaskIntoConstraints="NO" id="Q2A-xW-Qeb">
                                 <rect key="frame" x="6" y="101" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="KZ2-iK-HXs"/>
@@ -272,7 +272,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.7666823308270676" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Vmc-u5-HxU" firstAttribute="leading" secondItem="Q2A-xW-Qeb" secondAttribute="trailing" constant="4" id="2CF-Kt-MOs"/>
                             <constraint firstItem="BbI-Bp-aoa" firstAttribute="leading" secondItem="Jju-aV-dGB" secondAttribute="leadingMargin" constant="-6" id="9K0-rQ-Grr"/>
@@ -338,8 +338,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Xsh-42-zRK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" restorationIdentifier="MenuCellID" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCellID" id="qa3-zb-K6o" customClass="MenuTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -352,9 +352,13 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ylG-My-Lx6">
+                                            <rect key="frame" x="5" y="10" width="25" height="25"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="menuImageView" destination="ylG-My-Lx6" id="Bvy-d0-fFZ"/>
                                     <outlet property="menuLabel" destination="chs-Fn-xRv" id="kdO-sT-6Bz"/>
                                 </connections>
                             </tableViewCell>
@@ -419,6 +423,6 @@
         <image name="premium" width="228" height="146"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="J2y-Nm-nWx"/>
+        <segue reference="CrP-eV-LTe"/>
     </inferredMetricsTieBreakers>
 </document>

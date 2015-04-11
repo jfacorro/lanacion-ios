@@ -39,16 +39,18 @@
 
 - (void)setOutletsValues
 {
+    
+    self.title = self.benefit.benefitData.nombre;
     self.benefitCategoriesLabel.text = [NSString stringWithFormat:@"%@ - %@",self.benefit.benefitData.categoria,self.benefit.benefitData.subcategoria];
     self.benefitDisscountLabel.text = self.benefit.benefitData.tipo;
     [self.benefitImageView setImageWithURL:[NSURL URLWithString:[self.benefit.benefitImages firstObject]]];
     self.benefitExpirationDateLabel.text = [self.benefit.benefitToDate timeToExpireText];
 
-    if (![self.benefit.benefitData.tarjeta containsString:@"classic"])
+    if (![[self.benefit.benefitData.tarjeta lowercaseString] containsString:@"classic"])
     {
         self.benefitClassicCardImageView.alpha = 0.15f;
     }
-    if (![self.benefit.benefitData.tarjeta containsString:@"premium"])
+    if (![[self.benefit.benefitData.tarjeta lowercaseString] containsString:@"premium"])
     {
         self.benefitPremiumCardImageView.alpha = 0.15f;
     }

@@ -38,7 +38,7 @@
     
     self.backend = [[LNClubBackend alloc]init];
     self.repository = [[LNBenefitRepository alloc]initWithBackend:self.backend];
-    self.repository.serverUrl = @"http://lanacion.herokuapp.com/api";
+    self.repository.serverUrl = @"http://23.23.128.233:8080/api";
     
     [self.mapView setDelegate:self];
     // Do any additional setup after loading the view.
