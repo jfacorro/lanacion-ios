@@ -7,42 +7,23 @@
 //
 
 #import "LNBenefit.h"
-#import "LNBenefitData.h"
-#import "LNBusiness.h"
 #import "NSDictionary+NullObject.h"
 #import "NSString+toDate.h"
 
 @implementation LNBenefit
 +(LNBenefit *)benefitWithDictionary:(NSDictionary *)benefitDictionary
 {
-    LNBenefit * benefit = [[LNBenefit alloc]init];
-    benefit.benefitId = [benefitDictionary safeObjectForKey:@"id"];
-    
-
-//    NSString * imagesString = [benefitDictionary safeObjectForKey:@"imagen"];
-//    benefit.benefitImages = [benefit getImagesFromString:imagesString];
-    benefit.benefitImages = [benefit getImagesFromString:@"nombre=10041.jpg:Tipo=12:Great=0-nombre=10610.jpg:Tipo=12:Great=0-nombre=19683.jpg:Tipo=2:Great=0"];
-    
-    NSString * sinceString = [benefitDictionary safeObjectForKey:@"desde"];
-    benefit.benefitSinceDate = [sinceString toDate];
-    NSString * toString = [benefitDictionary safeObjectForKey:@"hasta"];
-    benefit.benefitToDate = [toString toDate];
-
-    
-    benefit.benefitLocation = [[CLLocation alloc] initWithLatitude:[[benefitDictionary[@"point"] objectAtIndex:0] doubleValue]  longitude:[[benefitDictionary[@"point"] objectAtIndex:1]doubleValue]];
-    
-    benefit.benefitData = [LNBenefitData benefitDataWithDictionary:benefitDictionary[@"beneficio"]];
-    benefit.benefitBusiness = [LNBusiness businessWithDictionary:benefitDictionary[@"establecimiento"]];
-    
+    LNBenefit * benefit = [[LNBenefit alloc]initWithDictionary:benefitDictionary];
     return benefit;
 }
+
 -(id)initWithDictionary:(NSDictionary *)dictionary
 {
     if ( self = [super init])
     {
         self.benefitId = [dictionary safeObjectForKey:@"id"];
         
-        self.benefitImages = [self getImagesFromString:@"nombre=10041.jpg:Tipo=12:Great=0-nombre=10610.jpg:Tipo=12:Great=0-nombre=19683.jpg:Tipo=2:Great=0"];
+        self.benefitImages = [self getImagesFromString:[dictionary safeObjectForKey:@"imagen"]];
         
         NSString * sinceString = [dictionary safeObjectForKey:@"desde"];
         self.benefitSinceDate = [sinceString toDate];

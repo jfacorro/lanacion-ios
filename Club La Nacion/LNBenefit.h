@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import "IJAbstractDocument.h"
-@class LNBenefitData,LNBusiness;
+#import "LNBenefitData.h"
+#import "LNBusiness.h"
 
 @interface LNBenefit : IJAbstractDocument
 @property (nonatomic,strong)NSString *benefitId;
