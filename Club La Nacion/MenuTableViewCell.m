@@ -26,6 +26,6 @@
     _categoria = categoria;
     
     [self.menuLabel setText:[CategoriasProvider descriptionForCategoria:categoria]];
-    [self setBackgroundColor:[CategoriasProvider colorForCategoria:categoria]];
+    [self setBackgroundColor:[CategoriasProvider colorForCategoria:categoria withAlpha:0.75]];
 }
 @end

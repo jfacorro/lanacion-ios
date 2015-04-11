@@ -29,6 +29,6 @@
     NSInteger green = strtol( [GString UTF8String], NULL, 16);
     NSInteger blue = strtol( [BString UTF8String], NULL, 16);
     
-    return [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:1];
+    return [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:1.0];
 }
 @end
