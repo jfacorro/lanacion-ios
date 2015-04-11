@@ -163,10 +163,10 @@
             </objects>
             <point key="canvasLocation" x="556" y="1344"/>
         </scene>
-        <!--Beneficio View Controller-->
+        <!--Benefit Details View Controller-->
         <scene sceneID="34b-aS-CdX">
             <objects>
-                <viewController id="zdF-dZ-2Yz" customClass="BeneficioViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BenefitDetailsViewController" id="zdF-dZ-2Yz" customClass="BenefitDetailsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="l2g-Of-xIc"/>
                         <viewControllerLayoutGuide type="bottom" id="rdi-8c-b4X"/>
@@ -175,113 +175,159 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="15290" translatesAutoresizingMaskIntoConstraints="NO" id="Q2A-xW-Qeb">
-                                <rect key="frame" x="6" y="83" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="15290" translatesAutoresizingMaskIntoConstraints="NO" id="Q2A-xW-Qeb">
+                                <rect key="frame" x="6" y="36" width="275" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="LuX-9z-xNv"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="20%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRx-fF-ICO">
-                                <rect key="frame" x="339" y="131" width="65" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRx-fF-ICO">
+                                <rect key="frame" x="8" y="40" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="8vr-U4-NGi"/>
+                                    <constraint firstAttribute="height" constant="60" id="lPJ-Jj-elN"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.35686274509999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="30"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="premium" translatesAutoresizingMaskIntoConstraints="NO" id="wO5-m1-Xe8">
-                                <rect key="frame" x="339" y="83" width="62" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cuidado Personal - Centros Estéticos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="4e8-qC-1pB">
+                                <rect key="frame" x="8" y="5" width="398" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="FYT-wz-fCw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.28627450980000002" green="0.74509803919999995" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campichuelo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMa-fJ-REF">
+                                <rect key="frame" x="39" y="395" width="367" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="toG-O8-X9C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sobre la factura total en tratamientos!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vmc-u5-HxU">
+                                <rect key="frame" x="8" y="195" width="398" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KtL-HC-p14">
+                                <rect key="frame" x="0.0" y="223" width="414" height="164"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="164" id="hZh-NZ-AMs"/>
+                                </constraints>
+                            </mapView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="classic" translatesAutoresizingMaskIntoConstraints="NO" id="B8Z-KH-cJp">
+                                <rect key="frame" x="291" y="36" width="115" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="9gs-4n-IRa"/>
+                                    <constraint firstAttribute="height" constant="73" id="ccb-q8-M42"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbI-Bp-aoa">
-                                <rect key="frame" x="258" y="199" width="143" height="12"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="premium" translatesAutoresizingMaskIntoConstraints="NO" id="GmF-Jw-MrY">
+                                <rect key="frame" x="291" y="113" width="115" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="mlw-qk-U8H"/>
+                                    <constraint firstAttribute="width" constant="115" id="qh5-Ju-0wm"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map pin" translatesAutoresizingMaskIntoConstraints="NO" id="6jV-pb-5Fg">
+                                <rect key="frame" x="8" y="395" width="24" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5LG-EO-brY"/>
+                                    <constraint firstAttribute="width" constant="24" id="AB4-Vy-viJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbI-Bp-aoa">
+                                <rect key="frame" x="10" y="173" width="96" height="12"/>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="7hd-DY-HFU"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Termina en ">
                                         <attributes>
                                             <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <font key="NSFont" size="12" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="2 dias">
                                         <attributes>
                                             <color key="NSColor" red="0.89253472222222219" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pv4-gg-RJg">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Rs salud y estetica" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="RX3-0a-yFX">
-                                        <rect key="frame" x="8" y="8" width="398" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="4NR-aJ-XZr"/>
-                                            <constraint firstAttribute="width" constant="398" id="Ipq-8o-ctx"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.28627450980392155" green="0.74509803921568629" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="centerX" secondItem="RX3-0a-yFX" secondAttribute="centerX" id="GAs-9g-t3c"/>
-                                    <constraint firstAttribute="centerY" secondItem="RX3-0a-yFX" secondAttribute="centerY" id="XKF-2b-RBR"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Cuidado Personal - Centros Estéticos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="4e8-qC-1pB">
-                                <rect key="frame" x="6" y="56" width="398" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.28627450980000002" green="0.74509803919999995" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KtL-HC-p14">
-                                <rect key="frame" x="15" y="15" width="187" height="156"/>
-                            </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Campichuelo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMa-fJ-REF">
-                                <rect key="frame" x="6" y="526" width="383" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sobre la factura total en tratamientos!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vmc-u5-HxU">
-                                <rect key="frame" x="6" y="222" width="398" height="110"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Vmc-u5-HxU" firstAttribute="leading" secondItem="Q2A-xW-Qeb" secondAttribute="trailing" constant="4" id="2CF-Kt-MOs"/>
-                            <constraint firstAttribute="centerX" secondItem="4e8-qC-1pB" secondAttribute="centerX" id="4vN-VB-hq8"/>
-                            <constraint firstItem="wO5-m1-Xe8" firstAttribute="top" secondItem="4e8-qC-1pB" secondAttribute="bottom" constant="6" id="5LB-Nt-cEx"/>
-                            <constraint firstItem="tRx-fF-ICO" firstAttribute="top" secondItem="wO5-m1-Xe8" secondAttribute="bottom" constant="8" id="7Bm-OW-6CF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="B8Z-KH-cJp" secondAttribute="trailing" constant="-8" id="6PR-qJ-G7g"/>
+                            <constraint firstItem="BbI-Bp-aoa" firstAttribute="top" secondItem="tRx-fF-ICO" secondAttribute="bottom" constant="73" id="9dP-bV-y2m"/>
+                            <constraint firstItem="6jV-pb-5Fg" firstAttribute="leading" secondItem="Jju-aV-dGB" secondAttribute="leadingMargin" constant="-8" id="Cch-cx-0by"/>
+                            <constraint firstItem="Q2A-xW-Qeb" firstAttribute="bottom" secondItem="GmF-Jw-MrY" secondAttribute="bottom" id="Gu8-1H-MJx"/>
                             <constraint firstItem="4e8-qC-1pB" firstAttribute="leading" secondItem="Jju-aV-dGB" secondAttribute="leadingMargin" constant="-10" id="IyP-pD-8kr"/>
                             <constraint firstItem="KtL-HC-p14" firstAttribute="top" secondItem="Q2A-xW-Qeb" secondAttribute="bottom" constant="16" id="J0q-16-uVP"/>
+                            <constraint firstItem="BbI-Bp-aoa" firstAttribute="leading" secondItem="Jju-aV-dGB" secondAttribute="leadingMargin" constant="-6" id="Kjh-nP-55T"/>
+                            <constraint firstItem="4e8-qC-1pB" firstAttribute="top" secondItem="Jju-aV-dGB" secondAttribute="topMargin" constant="5" id="MNb-HJ-tqS"/>
+                            <constraint firstItem="Vmc-u5-HxU" firstAttribute="leading" secondItem="Jju-aV-dGB" secondAttribute="leadingMargin" constant="-8" id="N2r-6p-HTS"/>
+                            <constraint firstItem="Vmc-u5-HxU" firstAttribute="top" secondItem="GmF-Jw-MrY" secondAttribute="bottom" constant="9" id="OY9-qL-c67"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BbI-Bp-aoa" secondAttribute="trailing" constant="-6" id="Ot3-ZW-vG2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="wO5-m1-Xe8" secondAttribute="trailing" constant="-6" id="Qmg-Zh-hLD"/>
-                            <constraint firstItem="4e8-qC-1pB" firstAttribute="leading" secondItem="Jju-aV-dGB" secondAttribute="leadingMargin" constant="-8" id="Slu-N9-xiZ"/>
-                            <constraint firstItem="wO5-m1-Xe8" firstAttribute="leading" secondItem="Vmc-u5-HxU" secondAttribute="trailing" constant="15.5" id="XPU-3d-r7I"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4e8-qC-1pB" secondAttribute="trailing" constant="-8" id="imM-Wa-WhJ"/>
-                            <constraint firstItem="4e8-qC-1pB" firstAttribute="top" secondItem="pv4-gg-RJg" secondAttribute="bottom" constant="6" id="mls-bT-pzQ"/>
+                            <constraint firstItem="Q2A-xW-Qeb" firstAttribute="leading" secondItem="Jju-aV-dGB" secondAttribute="leadingMargin" constant="-10" id="Qp1-Ft-qNw"/>
+                            <constraint firstItem="4e8-qC-1pB" firstAttribute="leading" secondItem="Jju-aV-dGB" secondAttribute="leadingMargin" constant="-8" id="S64-hh-86c"/>
+                            <constraint firstItem="tRx-fF-ICO" firstAttribute="top" secondItem="4e8-qC-1pB" secondAttribute="bottom" constant="8" id="SDf-P9-1Tr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eMa-fJ-REF" secondAttribute="trailing" constant="-8" id="XZ4-Rq-NeG"/>
+                            <constraint firstItem="eMa-fJ-REF" firstAttribute="top" secondItem="KtL-HC-p14" secondAttribute="bottom" constant="8" id="YpU-FC-dOJ"/>
+                            <constraint firstItem="KtL-HC-p14" firstAttribute="top" secondItem="Vmc-u5-HxU" secondAttribute="bottom" constant="8" id="ZgE-oz-pfR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KtL-HC-p14" secondAttribute="trailing" constant="-16" id="beI-ks-nOF"/>
+                            <constraint firstItem="eMa-fJ-REF" firstAttribute="leading" secondItem="6jV-pb-5Fg" secondAttribute="trailing" constant="7" id="dT5-WC-uqZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GmF-Jw-MrY" secondAttribute="trailing" constant="-8" id="ed5-NQ-sfc"/>
+                            <constraint firstItem="Q2A-xW-Qeb" firstAttribute="top" secondItem="4e8-qC-1pB" secondAttribute="bottom" constant="4" id="hBv-ah-1ZG"/>
+                            <constraint firstItem="KtL-HC-p14" firstAttribute="leading" secondItem="Jju-aV-dGB" secondAttribute="leadingMargin" constant="-16" id="jL6-uf-rLf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vmc-u5-HxU" secondAttribute="trailing" constant="-8" id="rcq-rO-bmh"/>
+                            <constraint firstItem="GmF-Jw-MrY" firstAttribute="leading" secondItem="Q2A-xW-Qeb" secondAttribute="trailing" constant="10" id="tdf-3p-eD8"/>
+                            <constraint firstItem="tRx-fF-ICO" firstAttribute="leading" secondItem="Jju-aV-dGB" secondAttribute="leadingMargin" constant="-8" id="vYI-n4-bgw"/>
+                            <constraint firstItem="6jV-pb-5Fg" firstAttribute="top" secondItem="KtL-HC-p14" secondAttribute="bottom" constant="8" id="vzg-SS-UgX"/>
+                            <constraint firstItem="B8Z-KH-cJp" firstAttribute="top" secondItem="Q2A-xW-Qeb" secondAttribute="top" id="zdQ-eL-bX1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4e8-qC-1pB" secondAttribute="trailing" constant="-8" id="ztS-qa-Nwq"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="J0q-16-uVP"/>
                                 <exclude reference="IyP-pD-8kr"/>
-                                <exclude reference="2CF-Kt-MOs"/>
                                 <exclude reference="Ot3-ZW-vG2"/>
-                                <exclude reference="5LB-Nt-cEx"/>
-                                <exclude reference="Qmg-Zh-hLD"/>
-                                <exclude reference="XPU-3d-r7I"/>
-                                <exclude reference="7Bm-OW-6CF"/>
+                                <exclude reference="2CF-Kt-MOs"/>
+                                <exclude reference="J0q-16-uVP"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="benefitBusinessAddressLabel" destination="eMa-fJ-REF" id="W2y-H6-XrP"/>
+                        <outlet property="benefitCategoriesLabel" destination="4e8-qC-1pB" id="wEL-Lt-FcP"/>
+                        <outlet property="benefitClassicCardImageView" destination="B8Z-KH-cJp" id="9GJ-Wo-Xvc"/>
+                        <outlet property="benefitDescriptionLabel" destination="Vmc-u5-HxU" id="uIE-Eh-2bR"/>
+                        <outlet property="benefitDisscountLabel" destination="tRx-fF-ICO" id="UNv-N8-1Fl"/>
+                        <outlet property="benefitExpirationDateLabel" destination="BbI-Bp-aoa" id="HLI-Jq-tKx"/>
+                        <outlet property="benefitImageView" destination="Q2A-xW-Qeb" id="1Lu-Md-cgP"/>
+                        <outlet property="benefitPremiumCardImageView" destination="GmF-Jw-MrY" id="Ccr-9K-2HM"/>
+                        <outlet property="locationMapViewController" destination="KtL-HC-p14" id="tmv-89-I3W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vlp-GO-kZH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1301" y="910"/>
+            <point key="canvasLocation" x="1057" y="904"/>
         </scene>
         <!--Menu Table View Controller-->
         <scene sceneID="Fs1-TX-wRF">
@@ -357,6 +403,7 @@
         <image name="15290" width="275" height="150"/>
         <image name="Logo Club LA NACION" width="353" height="205"/>
         <image name="classic" width="228" height="146"/>
+        <image name="map pin" width="70" height="112"/>
         <image name="premium" width="228" height="146"/>
     </resources>
     <inferredMetricsTieBreakers>

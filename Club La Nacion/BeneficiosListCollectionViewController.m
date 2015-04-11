@@ -19,7 +19,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     self.backend = [[LNClubBackend alloc]init];
     self.repository = [[LNBenefitRepository alloc]initWithBackend:self.backend];
-    self.repository.serverUrl = @"http://23.23.128.233:8080/api";
+    self.repository.serverUrl = @"http://http://lanacion.herokuapp.com/api";
     self.repository.basePath = @"categoria/";
     
     // Uncomment the following line to preserve selection between presentations
