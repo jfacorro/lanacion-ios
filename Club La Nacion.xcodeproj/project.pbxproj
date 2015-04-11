@@ -128,7 +128,6 @@
 		418AAD401AD83D1400919B4D = {
 			isa = PBXGroup;
 			children = (
-				418AAD761AD83D9D00919B4D /* CoreLocation.framework */,
 				418AAD4B1AD83D1400919B4D /* Club La Nacion */,
 				418AAD651AD83D1500919B4D /* Club La NacionTests */,
 				418AAD4A1AD83D1400919B4D /* Products */,
@@ -173,6 +172,8 @@
 				7D0CA5851AD8958E00F19DFB /* BeneficioCollectionViewCell.h */,
 				7D0CA5861AD8958E00F19DFB /* BeneficioCollectionViewCell.m */,
 				7D0CA5881AD8A1D800F19DFB /* NavigationDelegate.h */,
+				41790E451AD8DAA600AAF1D9 /* BenefitDetailsViewController.h */,
+				41790E461AD8DAA600AAF1D9 /* BenefitDetailsViewController.m */,
 				7D0CA5891AD8A28400F19DFB /* BeneficiosCategoriasEnum.h */,
 				7D0CA58A1AD8A8F200F19DFB /* CategoriasProvider.h */,
 				7D0CA58B1AD8A8F200F19DFB /* CategoriasProvider.m */,
@@ -185,8 +186,6 @@
 			children = (
 				418AAD4D1AD83D1400919B4D /* Info.plist */,
 				418AAD4E1AD83D1400919B4D /* main.m */,
-				41790E451AD8DAA600AAF1D9 /* BenefitDetailsViewController.h */,
-				41790E461AD8DAA600AAF1D9 /* BenefitDetailsViewController.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -259,6 +258,7 @@
 		F132C1EA1031FDB28BD36967 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				418AAD761AD83D9D00919B4D /* CoreLocation.framework */,
 				7D0CA58D1AD8C56000F19DFB /* MapKit.framework */,
 				CE74D5252A9598D0927079F0 /* libPods.a */,
 			);
