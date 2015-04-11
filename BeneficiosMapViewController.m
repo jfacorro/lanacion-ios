@@ -14,11 +14,14 @@
 #import "LNClubBackend.h"
 #import "LNBenefitRepository.h"
 #import "LNBenefit.h"
+#import "MapBenefitDetailView.h"
 
 @interface BeneficiosMapViewController () <MKMapViewDelegate,BeneficiosManagerDelegate>
 
 @property (nonatomic, strong) CLLocationManager* locationManager;
 @property (nonatomic, strong) BeneficiosManager* beneficiosManager;
+
+@property (nonatomic,strong) MapBenefitDetailView *mapDetailView;
 
 @property (nonatomic, strong) IBOutlet MKMapView* mapView;
 @end
@@ -28,6 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self createMapDetailView];
     
     self.title = @"Cerca tuyo";
     
@@ -47,7 +51,15 @@
 
     // Do any additional setup after loading the view.
 }
-
+- (void)createMapDetailView
+{
+    self.mapDetailView = [MapBenefitDetailView view];
+    CGRect detailFrame = self.mapDetailView.frame;
+    CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
+    detailFrame.origin.y = screenHeight + 1;
+    self.mapDetailView.frame = detailFrame;
+    [self.view addSubview:self.mapDetailView];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -111,6 +123,30 @@
     
 }
 
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+{
+    for (id currentAnnotation in self.mapView.annotations) {
+            [self.mapView deselectAnnotation:currentAnnotation animated:YES];
+    }
+    self.mapDetailView.benefit = (LNBenefit *)view.annotation;
+
+    CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
+    CGRect mapDetailViewFrame = self.mapDetailView.frame;
+    
+    if ( mapDetailViewFrame.origin.y >= screenHeight)
+    {
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:0.5];
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+        mapDetailViewFrame.origin.y = screenHeight - mapDetailViewFrame.size.height;
+        self.mapDetailView.frame = mapDetailViewFrame;
+    }
+    [UIView commitAnimations];
+}
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    
+}
 /*
 #pragma mark - Navigation
 
